@@ -1,0 +1,109 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Services — KRD Websmith</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><style>
+.packages{border-top:1px solid var(--ink)}
+.package{
+  padding:34px 0;
+  display:grid;
+  grid-template-columns:90px 1fr 260px;
+  gap:30px;
+  border-bottom:1px solid var(--line);
+}
+.package h2{margin:0;font:500 clamp(38px,5vw,72px)/.9 "Cormorant Garamond",serif}
+.package p{max-width:650px}
+.package ul{padding:0;list-style:none;margin:24px 0 0;max-width:650px}
+.package li{padding:9px 0;border-bottom:1px solid var(--line);font:500 9px "IBM Plex Mono",monospace}
+.package-price{font:600 10px "IBM Plex Mono",monospace;text-transform:uppercase}
+
+.recommender{
+  margin-top:110px;
+  padding:50px 0;
+  border-top:1px solid var(--ink);
+  border-bottom:1px solid var(--ink);
+}
+.rec-layout{display:grid;grid-template-columns:.75fr 1.25fr;gap:70px}
+.rec-step{padding:22px 0;border-bottom:1px solid var(--line)}
+.rec-step h3{margin:0 0 14px;font:500 28px "Cormorant Garamond",serif}
+.rec-options{display:flex;gap:8px;flex-wrap:wrap}
+.rec-options button{
+  padding:10px 12px;
+  border:1px solid var(--ink);
+  background:transparent;
+  font:500 8px "IBM Plex Mono",monospace;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+.rec-options button.active{background:var(--ink);color:var(--paper)}
+.rec-result{display:none;margin-top:28px;padding:28px;background:var(--ink);color:var(--paper)}
+.rec-result.show{display:block}
+.rec-result h3{margin:8px 0 10px;font:500 44px "Cormorant Garamond",serif}
+.rec-result p{color:#C3BCB0;max-width:680px}
+@media(max-width:900px){
+  .package{grid-template-columns:50px 1fr}
+  .package>div:last-child{grid-column:2}
+  .rec-layout{grid-template-columns:1fr}
+}
+</style></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header id="siteHeader" class="site-header">
+  <a class="brand" href="index.html" aria-label="KRD Websmith home">
+    <span class="brand-mark">KRD</span>
+    <span class="brand-copy"><strong>KRD WEBSMITH</strong><small>WEB DESIGN / DEVELOPMENT</small></span>
+  </a>
+  <nav class="desktop-nav" aria-label="Primary navigation"><a class="" href="work.html">Work</a><a class="active" href="services.html">Services</a><a class="" href="process.html">Process</a><a class="" href="audit.html">Audit</a><a class="" href="about.html">About</a></nav>
+  <div class="header-action">
+    <a class="header-cta" href="contact.html">Start a project <span>↗</span></a>
+    <button id="menuToggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</header>
+<div id="mobileMenu" class="mobile-menu">
+  <nav><a href="work.html"><span>Work</span><small>01</small></a><a href="services.html"><span>Services</span><small>02</small></a><a href="process.html"><span>Process</span><small>03</small></a><a href="audit.html"><span>Audit</span><small>04</small></a><a href="about.html"><span>About</span><small>05</small></a><a href="contact.html"><span>Contact</span><small>06</small></a></nav>
+</div>
+<main id="main" class="shell"><div class="breadcrumbs"><a href="index.html">Home</a><span>/</span><span>Services</span></div><section class="page-hero"><div class="page-hero-grid"><div><div class="kicker">Services</div><h1>Buy the<br><em>right thing.</em></h1></div><div class="page-hero-aside"><p class="body-copy">Clear starting points without locking the project into a rigid template. The scope should fit the business.</p><div class="page-actions button-row"><a class="button dark" href="#recommender">Find my package <span>↓</span></a><a class="button" href="contact.html">Start a project <span>↗</span></a></div></div></div></section>
+<section class="section"><div class="packages">
+<div class="package reveal"><span class="kicker">01</span><div><h2>Business Website</h2><p class="body-copy">For a local business that needs a strong professional presence and a clear customer path.</p><ul><li>Custom homepage</li><li>Services content</li><li>Responsive design</li><li>Contact form</li><li>Basic SEO setup</li><li>Two revision rounds</li></ul></div><div class="package-price">From $300 CAD</div></div>
+<div class="package reveal"><span class="kicker">02</span><div><h2>Growth Website</h2><p class="body-copy">For businesses that need more pages, stronger lead generation, and a fuller visual system.</p><ul><li>Multiple pages</li><li>Custom interactions</li><li>Lead-focused structure</li><li>Project / gallery system</li><li>Forms and integrations</li><li>Two revision rounds</li></ul></div><div class="package-price">From $500 CAD</div></div>
+<div class="package reveal"><span class="kicker">03</span><div><h2>Advanced Build</h2><p class="body-copy">For unique features, deeper flows, advanced interactions, or requirements outside a standard business website.</p><ul><li>Custom scope</li><li>Advanced interactions</li><li>Third-party integrations</li><li>Custom forms</li><li>Unique content systems</li></ul></div><div class="package-price">Quoted by scope</div></div>
+</div>
+
+<section class="recommender" id="recommender"><div class="rec-layout"><div><div class="kicker">Package recommender</div><h2 class="display">Tell me the shape.<br><em>I’ll narrow the scope.</em></h2><p class="body-copy">This gives you a starting point. It is not a binding quote.</p></div><div>
+<div class="rec-step" data-key="pages"><h3>How much content?</h3><div class="rec-options"><button data-v="1">1–3 pages</button><button data-v="2">4–7 pages</button><button data-v="4">8+ pages</button></div></div>
+<div class="rec-step" data-key="features"><h3>How custom?</h3><div class="rec-options"><button data-v="1">Standard business site</button><button data-v="3">Custom interactions</button><button data-v="6">Advanced features</button></div></div>
+<div class="rec-step" data-key="goal"><h3>Main goal?</h3><div class="rec-options"><button data-v="1">Look professional</button><button data-v="3">Generate leads</button><button data-v="5">Build something unique</button></div></div>
+<div class="rec-result" id="recResult"><div class="kicker">Recommended fit</div><h3 id="recTitle"></h3><p id="recText"></p><a class="button light" id="recContact" href="contact.html">Start with this package <span>↗</span></a></div>
+</div></div></section>
+</section>
+<section class="next-step"><div><div class="meta">Next step</div><h3>Know what you need now?</h3></div><div class="button-row"><a class="button" href="work.html">See examples</a><a class="button" href="process.html">See process</a><a class="button dark" href="contact.html">Start a project ↗</a></div></section>
+</main>
+<footer class="site-footer">
+  <div class="shell footer-main">
+    <div>
+      <div class="kicker">KRD WEBSMITH</div>
+      <h2>Make the website<br>earn its place.</h2>
+    </div>
+    <div class="footer-col"><span>Explore</span><a href="work.html">Work</a><a href="services.html">Services</a><a href="process.html">Process</a><a href="audit.html">Website audit</a></div>
+    <div class="footer-col"><span>Contact</span><a href="about.html">About</a><a href="contact.html">Start a project</a><a href="mailto:hello@krdwebsmith.com">hello@krdwebsmith.com</a></div>
+  </div>
+  <div class="footer-bottom"><span>© <span id="year"></span> KRD Websmith</span><span>Kitchener, Ontario / Remote</span></div>
+</footer>
+<script src="script.js"></script><script>
+const answers={};
+document.querySelectorAll(".rec-step").forEach(step=>step.querySelectorAll("button").forEach(btn=>btn.addEventListener("click",()=>{
+  step.querySelectorAll("button").forEach(x=>x.classList.remove("active"));
+  btn.classList.add("active");
+  answers[step.dataset.key]=Number(btn.dataset.v);
+  if(Object.keys(answers).length===3){
+    const score=Object.values(answers).reduce((a,b)=>a+b,0);
+    let title,text;
+    if(score<=5){title="Business Website";text="Focused scope. Keep the build clear and useful without paying for complexity you do not need."}
+    else if(score<=10){title="Growth Website";text="Your project benefits from more pages, stronger lead paths, and a fuller content system."}
+    else{title="Advanced Build";text="The scope points toward custom functionality or deeper systems that should be quoted individually."}
+    document.getElementById("recTitle").textContent=title;
+    document.getElementById("recText").textContent=text;
+    document.getElementById("recContact").href="contact.html?package="+encodeURIComponent(title);
+    document.getElementById("recResult").classList.add("show");
+  }
+})));
+</script></body></html>

@@ -1,0 +1,117 @@
+KRD WEBSMITH — HOMEPAGE CONVERSION BLUEPRINT
+
+1. GLOBAL STYLE SYSTEM
+
+Aesthetic:
+Minimalist Light Mode with editorial B2B structure. The layout is designed for a visitor who may have arrived from a cold outbound email and needs to establish trust quickly.
+
+Color distribution:
+60% Base Background: #F8F7F3
+30% Surface / Imagery / White Space: #FFFFFF and #EEEAE2
+10% Action / Micro Accent: #002FA7
+Primary Text: #121212
+Secondary Text: #68655F
+Borders: #D9D5CC with #121212 for structural separators
+
+Typography:
+H1: Archivo 800, clamp(62px, 8.4vw, 138px), line-height .84, letter-spacing -.07em
+H2: Archivo 800, clamp(48px, 6.4vw, 98px), line-height .90
+Editorial emphasis: Playfair Display 600 italic
+H3: Playfair Display 600, 30–56px depending on component
+Body: Archivo / 12–15px, line-height 1.7–1.85
+Utility: IBM Plex Mono 8–10px uppercase, tracking .10–.15em
+
+Spacing:
+Base unit: 8px
+Micro: 8 / 12 / 16
+Component: 24 / 28 / 32
+Section: 64 / 80 / 100 / 160
+Desktop outer padding: clamp(20px, 4.4vw, 72px)
+No rounded cards. Buttons and panels use 0px radius.
+Borders are 1px.
+
+2. SECTION-BY-SECTION WIREFRAMES
+
+HERO
+Desktop: 12-column CSS Grid.
+Left: columns 1–7. H1 and niche label.
+Right: columns 9–12, displaced downward by 76px.
+Below: visual composition spans all 12 columns using 1.4fr / .6fr image split.
+Bottom: four-column proof strip.
+
+H1:
+<h1>Your website should make the next customer <em>trust you faster.</em></h1>
+
+Body:
+“I build custom websites for businesses that have outgrown their current site, need a stronger first impression, or want a clearer path from visitor to inquiry.”
+
+Primary CTA:
+“Get a project quote ↗”
+Secondary CTA:
+“See the work →”
+
+Cold outbound microcopy:
+“Got my email? I only reach out when I spot a real opportunity. You can see exactly how I think about websites below before deciding whether to reply.”
+
+Hover:
+Primary button: background #121212 → #002FA7, 250ms ease, translateY(-2px).
+Secondary: transparent → #121212 with white text.
+
+TRUST / SOCIAL PROOF
+No fake logos, clients, or metrics.
+Uses a 2x2 ledger separated by 1px lines.
+
+01 First Impression
+“Look established before the first call.”
+
+02 Mobile
+“Work properly where customers actually browse.”
+
+03 Clarity
+“Make the offer easy to understand.”
+
+04 Action
+“Give every page a useful next step.”
+
+CORE OFFER
+Desktop: 0.78fr sticky left column / 1.22fr service index.
+Mobile: one-column stack.
+Each service is a full-width structural row rather than a card.
+
+Business Website — From $300 CAD
+Growth Website — From $500 CAD
+Advanced Build — Quoted by scope
+
+CASE STUDIES
+Dark inversion section.
+Desktop: 1.2fr hero project / .8fr two-item side stack.
+Images use real business-category photography with a dark 1px structural border.
+All case studies are explicitly labeled as concept work.
+
+PROCESS
+Desktop: 1fr sticky process image / 1fr process list.
+Steps:
+01 Scope
+02 Direction
+03 Build
+04 Review
+05 Launch
+
+HIGH-INTENT CTA
+Full-width 1.35fr / .65fr split.
+Headline:
+“You do not need to decide today. Just compare.”
+
+Body:
+“Look at your current site, look at the work here, and decide whether the difference matters to your business. If it does, send me the project and I’ll tell you what I would change first.”
+
+Primary CTA:
+“Request a project quote ↗”
+Secondary:
+“Score my current site →”
+
+FOOTER
+Three-column desktop structure:
+Large KRD statement / Explore links / Contact links.
+Mobile stacks to one column.
+No newsletter form, no decorative clutter.

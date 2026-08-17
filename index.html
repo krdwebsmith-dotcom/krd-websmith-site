@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="KRD Websmith builds premium custom websites for service businesses that need a stronger first impression, clearer customer journey, and better lead conversion.">
+  <meta name="theme-color" content="#F8F7F3">
+  <title>KRD Websmith — Websites Built to Win Better Business</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    :root{
+      --out-bg:#F8F7F3;
+      --out-surface:#FFFFFF;
+      --out-ink:#121212;
+      --out-muted:#68655F;
+      --out-accent:#002FA7;
+      --out-line:#D9D5CC;
+      --out-soft:#EEEAE2;
+      --out-green:#1F5B42;
+      --out-shadow:0 18px 50px rgba(18,18,18,.07);
+    }
+
+    body{background:var(--out-bg)}
+
+    .outbound-hero{
+      min-height:100svh;
+      padding-top:82px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      border-bottom:1px solid var(--out-ink);
+      background:var(--out-bg);
+    }
+
+    .outbound-hero-main{
+      padding-top:clamp(64px,8vw,120px);
+      padding-bottom:54px;
+      display:grid;
+      grid-template-columns:repeat(12,minmax(0,1fr));
+      gap:20px;
+      align-items:start;
+    }
+
+    .hero-left{grid-column:1/8}
+    .hero-right{grid-column:9/13;padding-top:76px}
+
+    .eyebrow-row{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      gap:12px;
+      margin-bottom:28px;
+      font:600 9px "IBM Plex Mono",monospace;
+      text-transform:uppercase;
+      letter-spacing:.13em;
+    }
+
+    .eyebrow-dot{
+      width:8px;height:8px;background:var(--out-accent);display:inline-block
+    }
+
+    .outbound-title{
+      margin:0;
+      max-width:980px;
+      font:800 clamp(62px,8.4vw,138px)/.84 "Archivo",sans-serif;
+      letter-spacing:-.07em;
+      text-transform:uppercase;
+    }
+
+    .outbound-title em{
+      display:block;
+      font-family:"Playfair Display",serif;
+      font-weight:600;
+      text-transform:none;
+      color:var(--out-accent);
+      letter-spacing:-.055em;
+    }
+
+    .hero-right-copy{
+      padding-top:22px;
+      border-top:1px solid var(--out-ink);
+    }
+
+    .hero-right-copy p{
+      margin:0;
+      color:var(--out-muted);
+      font-size:15px;
+      line-height:1.75;
+    }
+
+    .hero-actions{
+      margin-top:28px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .hero-primary{
+      min-height:54px;
+      padding:0 20px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:28px;
+      background:var(--out-ink);
+      color:white;
+      border:1px solid var(--out-ink);
+      font:600 10px "IBM Plex Mono",monospace;
+      text-transform:uppercase;
+      letter-spacing:.11em;
+      transition:background .25s ease,border-color .25s ease,transform .25s ease;
+    }
+    .hero-primary:hover{background:var(--out-accent);border-color:var(--out-accent);transform:translateY(-2px)}
+
+    .hero-secondary{
+      min-height:54px;
+      padding:0 20px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:28px;
+      border:1px solid var(--out-ink);
+      background:transparent;
+      font:600 10px "IBM Plex Mono",monospace;
+      text-transform:uppercase;
+      letter-spacing:.11em;
+      transition:background .25s ease,color .25s ease,transform .25s ease;
+    }
+    .hero-secondary:hover{background:var(--out-ink);color:white;transform:translateY(-2px)}
+
+    .cold-email-note{
+      margin-top:28px;
+      padding:18px 0 0;
+      border-top:1px solid var(--out-line);
+      display:grid;
+      grid-template-columns:120px 1fr;
+      gap:20px;
+    }
+
+    .cold-email-note strong{
+      font:600 9px "IBM Plex Mono",monospace;
+      text-transform:uppercase;
+      color:var(--out-accent);
+      letter-spacing:.1em;
+    }
+
+    .cold-email-note span{
+      color:var(--out-muted);
+      font-size:12px;
+      line-height:1.65;
+    }
+
+    .hero-visual{
+      grid-column:1/13;
+      margin-top:40px;
+      display:grid;
+      grid-template-columns:1.4fr .6fr;
+      gap:16px;
+      min-height:580px;
+    }
+
+    .hero-main-image,
+    .hero-side-image{
+      position:relative;
+      overflow:hidden;
+      border:1px solid var(--out-ink);
+      background:#DAD7D0;
+    }
+
+    .hero-main-image img,
+    .hero-side-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter:saturate(.72);
+      transition:transform .8s ease,filter .4s ease;
+    }
+
+    .hero-main-image:hover img,
+    .hero-side-image:hover img{
+      transform:scale(1.025);
+      filter:saturate(.9);
+    }
+
+    .image-tag{
+      position:absolute;
+      left:0;bottom:0;
+      padding:11px 13px;
+      background:var(--out-bg);
+      border-top:1px solid var(--out-ink);
+      border-right:1px solid var(--out-ink);
+      font:600 8px "IBM Plex Mono",monospace;
+      text-transform:uppercase;
+      letter-spacing:.1em;
+    }
+
+    .hero-proof-strip{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      border-top:1px solid var(--out-ink);
+    }
+
+    .proof-cell{
+      min-height:78px;
+      padding:15px var(--pad);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      border-right:1px solid var(--out-line);
+    }
+
+    .proof-cell:last-child{border-right:0}
+    .proof-cell span{font:600 8px "IBM Plex Mono",monospace;color:var(--out-accent)}
+    .proof-cell strong{font:600 10px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.08em}
+
+    .conversion-section{
+      padding:clamp(100px,10vw,160px) 0;
+    }
+
+    .conversion-head{
+      display:grid;
+      grid-template-columns:1.25fr .75fr;
+      gap:70px;
+      align-items:end;
+      margin-bottom:64px;
+    }
+
+    .conversion-head h2{
+      margin:10px 0 0;
+      font:800 clamp(48px,6.4vw,98px)/.9 "Archivo",sans-serif;
+      letter-spacing:-.065em;
+      text-transform:uppercase;
+    }
+
+    .conversion-head h2 em{
+      font-family:"Playfair Display",serif;
+      text-transform:none;
+      font-weight:600;
+      color:var(--out-accent);
+    }
+
+    .conversion-head p{
+      max-width:470px;
+      justify-self:end;
+      margin:0;
+      color:var(--out-muted);
+      font-size:14px;
+      line-height:1.8;
+    }
+
+    .proof-ledger{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      border-top:1px solid var(--out-ink);
+      border-bottom:1px solid var(--out-ink);
+    }
+
+    .proof-ledger-item{
+      min-height:280px;
+      padding:28px;
+      border-right:1px solid var(--out-line);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .proof-ledger-item:nth-child(2n){border-right:0}
+    .proof-ledger-item:nth-child(-n+2){border-bottom:1px solid var(--out-line)}
+
+    .proof-ledger-item .num{
+      color:var(--out-accent);
+      font:600 9px "IBM Plex Mono",monospace;
+    }
+
+    .proof-ledger-item h3{
+      margin:42px 0 10px;
+      font:600 clamp(30px,3vw,44px)/1 "Playfair Display",serif;
+      letter-spacing:-.035em;
+    }
+
+    .proof-ledger-item p{
+      margin:0;
+      max-width:530px;
+      color:var(--out-muted);
+      font-size:12px;
+      line-height:1.7;
+    }
+
+    .offer-layout{
+      display:grid;
+      grid-template-columns:.78fr 1.22fr;
+      gap:70px;
+      align-items:start;
+    }
+
+    .offer-aside{
+      position:sticky;
+      top:110px;
+    }
+
+    .offer-aside h2{
+      margin:10px 0 18px;
+      font:800 clamp(50px,6vw,92px)/.88 "Archivo",sans-serif;
+      letter-spacing:-.065em;
+      text-transform:uppercase;
+    }
+
+    .offer-aside h2 em{
+      display:block;
+      font:600 italic .9em "Playfair Display",serif;
+      text-transform:none;
+      color:var(--out-accent);
+      letter-spacing:-.04em;
+    }
+
+    .offer-index{border-top:1px solid var(--out-ink)}
+
+    .offer-row{
+      padding:28px 0;
+      display:grid;
+      grid-template-columns:60px 1fr auto;
+      gap:28px;
+      align-items:start;
+      border-bottom:1px solid var(--out-line);
+      transition:padding .25s ease,background .25s ease;
+    }
+    .offer-row:hover{padding-left:14px;padding-right:14px;background:var(--out-soft)}
+    .offer-row .offer-number{
+      color:var(--out-accent);
+      font:600 9px "IBM Plex Mono",monospace;
+    }
+    .offer-row h3{
+      margin:0 0 10px;
+      font:600 clamp(31px,3.8vw,56px)/.95 "Playfair Display",serif;
+      letter-spacing:-.045em;
+    }
+    .offer-row p{
+      max-width:660px;
+      margin:0;
+      color:var(--out-muted);
+      font-size:12px;
+      line-height:1.7;
+    }
+    .offer-row .price{
+      font:600 9px "IBM Plex Mono",monospace;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+
+    .case-study-section{
+      background:var(--out-ink);
+      color:white;
+    }
+    .case-study-section .conversion-head p{color:#BBB6AD}
+    .case-study-section .kicker{color:#7F9DEB}
+
+    .case-study-grid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:16px;
+    }
+
+    .case-big,
+    .case-small{
+      position:relative;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.25);
+    }
+    .case-big{height:690px}
+    .case-stack{display:grid;gap:16px}
+    .case-small{height:337px}
+
+    .case-big img,.case-small img{
+      height:100%;
+      object-fit:cover;
+      filter:saturate(.58) brightness(.7);
+      transition:transform .8s ease,filter .4s ease;
+    }
+    .case-big:hover img,.case-small:hover img{transform:scale(1.025);filter:saturate(.8) brightness(.75)}
+
+    .case-caption{
+      position:absolute;
+      left:0;right:0;bottom:0;
+      padding:17px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      align-items:end;
+      background:rgba(18,18,18,.94);
+      border-top:1px solid rgba(255,255,255,.25);
+    }
+
+    .case-caption small{
+      color:#B8B2A7;
+      font:500 8px "IBM Plex Mono",monospace;
+      text-transform:uppercase;
+      letter-spacing:.1em;
+    }
+    .case-caption strong{
+      display:block;
+      margin-top:5px;
+      font:600 clamp(26px,3vw,46px)/1 "Playfair Display",serif;
+    }
+    .case-caption span{
+      font:600 8px "IBM Plex Mono",monospace;
+      text-transform:uppercase;
+      color:#B8B2A7;
+    }
+
+    .process-layout{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:70px;
+      align-items:start;
+    }
+
+    .process-photo{
+      min-height:650px;
+      border:1px solid var(--out-ink);
+      position:sticky;
+      top:110px;
+      overflow:hidden;
+    }
+    .process-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.7)}
+
+    .process-list{border-top:1px solid var(--out-ink)}
+    .process-step{
+      padding:28px 0;
+      display:grid;
+      grid-template-columns:60px 1fr;
+      gap:22px;
+      border-bottom:1px solid var(--out-line);
+    }
+    .process-step span{color:var(--out-accent);font:600 9px "IBM Plex Mono",monospace}
+    .process-step h3{
+      margin:0 0 10px;
+      font:600 34px/1 "Playfair Display",serif;
+      letter-spacing:-.035em;
+    }
+    .process-step p{margin:0;color:var(--out-muted);font-size:12px;line-height:1.7}
+
+    .high-intent{
+      padding:80px 0;
+      border-top:1px solid var(--out-ink);
+      border-bottom:1px solid var(--out-ink);
+      display:grid;
+      grid-template-columns:1.35fr .65fr;
+      gap:70px;
+      align-items:end;
+    }
+
+    .high-intent h2{
+      margin:10px 0 0;
+      font:800 clamp(54px,7.5vw,118px)/.86 "Archivo",sans-serif;
+      text-transform:uppercase;
+      letter-spacing:-.07em;
+    }
+    .high-intent h2 em{
+      display:block;
+      font:600 italic .9em "Playfair Display",serif;
+      text-transform:none;
+      color:var(--out-accent);
+      letter-spacing:-.045em;
+    }
+    .high-intent p{margin:0 0 24px;color:var(--out-muted);font-size:13px;line-height:1.75}
+
+    @media(max-width:1000px){
+      .hero-left,.hero-right{grid-column:1/13}
+      .hero-right{padding-top:18px;max-width:680px}
+      .hero-visual{grid-template-columns:1fr}
+      .hero-main-image{min-height:500px}
+      .hero-side-image{min-height:360px}
+      .conversion-head,.offer-layout,.process-layout,.high-intent{grid-template-columns:1fr}
+      .conversion-head p{justify-self:start}
+      .offer-aside,.process-photo{position:static}
+      .process-photo{min-height:480px}
+      .case-study-grid{grid-template-columns:1fr}
+      .case-stack{grid-template-columns:1fr 1fr}
+    }
+
+    @media(max-width:700px){
+      .outbound-hero{padding-top:68px}
+      .outbound-hero-main{padding-top:66px}
+      .outbound-title{font-size:clamp(54px,17vw,90px)}
+      .cold-email-note{grid-template-columns:1fr}
+      .hero-main-image{min-height:420px}
+      .hero-proof-strip{grid-template-columns:1fr 1fr}
+      .proof-cell:nth-child(2){border-right:0}
+      .proof-cell{border-bottom:1px solid var(--out-line)}
+      .conversion-head h2{font-size:clamp(46px,14vw,72px)}
+      .proof-ledger{grid-template-columns:1fr}
+      .proof-ledger-item{border-right:0;border-bottom:1px solid var(--out-line)}
+      .offer-row{grid-template-columns:42px 1fr}
+      .offer-row .price{grid-column:2;margin-top:10px}
+      .case-big{height:470px}
+      .case-stack{grid-template-columns:1fr}
+      .case-small{height:340px}
+      .process-photo{min-height:420px}
+      .high-intent h2{font-size:clamp(50px,15vw,80px)}
+    }
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header id="siteHeader" class="site-header">
+  <a class="brand" href="index.html" aria-label="KRD Websmith home">
+    <span class="brand-mark">KRD</span>
+    <span class="brand-copy"><strong>KRD WEBSMITH</strong><small>WEB DESIGN / DEVELOPMENT</small></span>
+  </a>
+  <nav class="desktop-nav" aria-label="Primary navigation">
+    <a href="work.html">Work</a>
+    <a href="services.html">Services</a>
+    <a href="process.html">Process</a>
+    <a href="audit.html">Audit</a>
+    <a href="about.html">About</a>
+  </nav>
+  <div class="header-action">
+    <a class="header-cta" href="contact.html">Start a project <span>↗</span></a>
+    <button id="menuToggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</header>
+
+<div id="mobileMenu" class="mobile-menu">
+  <nav>
+    <a href="work.html"><span>Work</span><small>01</small></a>
+    <a href="services.html"><span>Services</span><small>02</small></a>
+    <a href="process.html"><span>Process</span><small>03</small></a>
+    <a href="audit.html"><span>Audit</span><small>04</small></a>
+    <a href="about.html"><span>About</span><small>05</small></a>
+    <a href="contact.html"><span>Contact</span><small>06</small></a>
+  </nav>
+</div>
+
+<main id="main">
+  <section class="outbound-hero">
+    <div class="shell outbound-hero-main">
+      <div class="hero-left">
+        <div class="eyebrow-row reveal">
+          <span class="eyebrow-dot"></span>
+          <span>Web design for service businesses</span>
+        </div>
+        <h1 class="outbound-title">
+          Your website should make the next customer
+          <em>trust you faster.</em>
+        </h1>
+      </div>
+
+      <div class="hero-right reveal">
+        <div class="hero-right-copy">
+          <p>I build custom websites for businesses that have outgrown their current site, need a stronger first impression, or want a clearer path from visitor to inquiry.</p>
+          <div class="hero-actions">
+            <a class="hero-primary" href="contact.html">Get a project quote <span>↗</span></a>
+            <a class="hero-secondary" href="work.html">See the work <span>→</span></a>
+          </div>
+          <div class="cold-email-note">
+            <strong>Got my email?</strong>
+            <span>I only reach out when I spot a real opportunity. You can see exactly how I think about websites below before deciding whether to reply.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="hero-main-image">
+          <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=2200&q=88" alt="Professional team reviewing a digital project">
+          <span class="image-tag">Strategy / Design / Development</span>
+        </div>
+        <div class="hero-side-image">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=86" alt="Premium modern office interior">
+          <span class="image-tag">Kitchener, Ontario / Remote</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-proof-strip">
+      <div class="proof-cell"><span>01</span><strong>Custom coded</strong></div>
+      <div class="proof-cell"><span>02</span><strong>Mobile first</strong></div>
+      <div class="proof-cell"><span>03</span><strong>Clear project scope</strong></div>
+      <div class="proof-cell"><span>04</span><strong>Direct communication</strong></div>
+    </div>
+  </section>
+
+  <section class="conversion-section shell">
+    <div class="conversion-head">
+      <div>
+        <div class="kicker">What earns trust</div>
+        <h2>A good website removes <em>doubt.</em></h2>
+      </div>
+      <p>Your customer is making decisions before they contact you. The site needs to answer the important questions quickly, look credible on every screen, and make the next action obvious.</p>
+    </div>
+
+    <div class="proof-ledger">
+      <article class="proof-ledger-item reveal">
+        <span class="num">01 / FIRST IMPRESSION</span>
+        <div>
+          <h3>Look established before the first call.</h3>
+          <p>Strong typography, image direction, spacing, and page hierarchy can make a small business feel organized and trustworthy without pretending to be something it is not.</p>
+        </div>
+      </article>
+      <article class="proof-ledger-item reveal">
+        <span class="num">02 / MOBILE</span>
+        <div>
+          <h3>Work properly where customers actually browse.</h3>
+          <p>The mobile layout is treated as a primary experience. Navigation, forms, service content, and calls to action are built intentionally for smaller screens.</p>
+        </div>
+      </article>
+      <article class="proof-ledger-item reveal">
+        <span class="num">03 / CLARITY</span>
+        <div>
+          <h3>Make the offer easy to understand.</h3>
+          <p>Visitors should know what you do, who it is for, and why they should care without digging through vague marketing copy or confusing menus.</p>
+        </div>
+      </article>
+      <article class="proof-ledger-item reveal">
+        <span class="num">04 / ACTION</span>
+        <div>
+          <h3>Give every page a useful next step.</h3>
+          <p>Quote requests, bookings, calls, service comparisons, and project inquiries are placed where they make sense instead of being buried in one generic contact button.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="conversion-section shell">
+    <div class="offer-layout">
+      <div class="offer-aside reveal">
+        <div class="kicker">What I build</div>
+        <h2>Websites with a <em>business purpose.</em></h2>
+        <p class="body-copy">Choose the closest starting point. The final scope is adjusted around the business, not forced into a rigid template.</p>
+        <div class="hero-actions">
+          <a class="hero-primary" href="services.html#recommender">Find my package <span>↗</span></a>
+        </div>
+      </div>
+
+      <div class="offer-index">
+        <a class="offer-row reveal" href="services.html">
+          <span class="offer-number">01</span>
+          <div>
+            <h3>Business Website</h3>
+            <p>For service businesses that need a professional site, clear service pages, responsive design, and a real inquiry path.</p>
+          </div>
+          <span class="price">From $300 CAD →</span>
+        </a>
+        <a class="offer-row reveal" href="services.html">
+          <span class="offer-number">02</span>
+          <div>
+            <h3>Growth Website</h3>
+            <p>For businesses that need more content depth, stronger conversion architecture, project galleries, and custom interactions.</p>
+          </div>
+          <span class="price">From $500 CAD →</span>
+        </a>
+        <a class="offer-row reveal" href="services.html">
+          <span class="offer-number">03</span>
+          <div>
+            <h3>Advanced Build</h3>
+            <p>For deeper systems, integrations, custom workflows, or requirements that go beyond a standard brochure website.</p>
+          </div>
+          <span class="price">Quoted by scope →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="conversion-section case-study-section">
+    <div class="shell">
+      <div class="conversion-head">
+        <div>
+          <div class="kicker">Selected concept work</div>
+          <h2>See how the answer <em>changes.</em></h2>
+        </div>
+        <p>These are concept projects, not fake client claims. They show how the visual system, customer path, and page hierarchy adapt to different businesses.</p>
+      </div>
+
+      <div class="case-study-grid">
+        <a class="case-big reveal" href="project-apex.html">
+          <img src="https://images.pexels.com/photos/28995187/pexels-photo-28995187.jpeg?auto=compress&cs=tinysrgb&w=1900" alt="Apex Auto Detailing concept">
+          <div class="case-caption">
+            <div><small>01 / Automotive</small><strong>APEX Auto Detailing</strong></div>
+            <span>Case study ↗</span>
+          </div>
+        </a>
+
+        <div class="case-stack">
+          <a class="case-small reveal" href="project-noir.html">
+            <img src="https://images.unsplash.com/photo-1686671805337-7d8aa64b965f?auto=format&fit=crop&w=1300&q=88" alt="Noir House barbershop concept">
+            <div class="case-caption">
+              <div><small>02 / Barbering</small><strong>NOIR HOUSE</strong></div>
+              <span>View ↗</span>
+            </div>
+          </a>
+          <a class="case-small reveal" href="project-evercrest.html">
+            <img src="https://images.squarespace-cdn.com/content/v1/55304fb5e4b00c29c94de6b3/f5a239d9-2dd5-49bb-8a9d-e895d165b5a9/IMG_1510%2B3.jpg" alt="Evercrest Outdoor landscape concept">
+            <div class="case-caption">
+              <div><small>03 / Landscape</small><strong>EVERCREST Outdoor</strong></div>
+              <span>View ↗</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-actions" style="margin-top:28px">
+        <a class="hero-secondary" style="color:white;border-color:white" href="work.html">Explore all work <span>↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="conversion-section shell">
+    <div class="conversion-head">
+      <div>
+        <div class="kicker">How projects move</div>
+        <h2>Fast enough to move. <em>Careful enough to trust.</em></h2>
+      </div>
+      <p>A simple project structure keeps decisions clear and prevents the build from turning into endless back-and-forth.</p>
+    </div>
+
+    <div class="process-layout">
+      <div class="process-photo reveal">
+        <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1500&q=86" alt="Professional workspace">
+        <span class="image-tag">Scope → Direction → Build → Refine → Launch</span>
+      </div>
+
+      <div class="process-list">
+        <div class="process-step reveal"><span>01</span><div><h3>Scope the business problem.</h3><p>Define the audience, current site, required pages, features, and what the new website needs to improve.</p></div></div>
+        <div class="process-step reveal"><span>02</span><div><h3>Set the visual and conversion direction.</h3><p>Typography, imagery, hierarchy, page structure, and calls to action are decided before polishing every screen.</p></div></div>
+        <div class="process-step reveal"><span>03</span><div><h3>Build responsively.</h3><p>The approved direction is coded for desktop, tablet, and mobile with the required forms and interactions.</p></div></div>
+        <div class="process-step reveal"><span>04</span><div><h3>Review and refine.</h3><p>Test the real experience, complete the agreed revisions, and remove anything that makes the site harder to use.</p></div></div>
+        <div class="process-step reveal"><span>05</span><div><h3>Launch cleanly.</h3><p>Deploy the approved site, verify the live domain and forms, and hand over a working system.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="conversion-section shell">
+    <div class="high-intent reveal">
+      <div>
+        <div class="kicker">If you came from my email</div>
+        <h2>You do not need to decide today. <em>Just compare.</em></h2>
+      </div>
+      <div>
+        <p>Look at your current site, look at the work here, and decide whether the difference matters to your business. If it does, send me the project and I’ll tell you what I would change first.</p>
+        <div class="hero-actions">
+          <a class="hero-primary" href="contact.html">Request a project quote <span>↗</span></a>
+          <a class="hero-secondary" href="audit.html">Score my current site <span>→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="shell footer-main">
+    <div>
+      <div class="kicker">KRD WEBSMITH</div>
+      <h2>Make the website<br>earn its place.</h2>
+    </div>
+    <div class="footer-col"><span>Explore</span><a href="work.html">Work</a><a href="services.html">Services</a><a href="process.html">Process</a><a href="audit.html">Website audit</a></div>
+    <div class="footer-col"><span>Contact</span><a href="about.html">About</a><a href="contact.html">Start a project</a><a href="mailto:hello@krdwebsmith.com">hello@krdwebsmith.com</a></div>
+  </div>
+  <div class="footer-bottom"><span>© <span id="year"></span> KRD Websmith</span><span>Kitchener, Ontario / Remote</span></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

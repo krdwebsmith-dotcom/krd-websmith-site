@@ -1,0 +1,62 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Work — KRD Websmith</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><style>
+.work-stack{display:grid;gap:22px}
+.work-item{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  min-height:560px;
+  border-top:1px solid var(--ink);
+  border-bottom:1px solid var(--ink);
+}
+.work-item:nth-child(even){grid-template-columns:.9fr 1.1fr}
+.work-item:nth-child(even) .work-photo{order:2}
+.work-photo{min-height:560px}
+.work-copy{padding:50px;display:flex;flex-direction:column}
+.work-copy h2{margin:auto 0 18px;font:500 clamp(48px,5.5vw,84px)/.88 "Cormorant Garamond",serif;letter-spacing:-.055em}
+.work-copy p{max-width:560px}
+.work-copy .button-row{margin-top:24px}
+@media(max-width:900px){
+  .work-item,.work-item:nth-child(even){grid-template-columns:1fr}
+  .work-item:nth-child(even) .work-photo{order:0}
+  .work-photo{min-height:480px}
+  .work-copy{padding:34px 0 10px}
+}
+</style></head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header id="siteHeader" class="site-header">
+  <a class="brand" href="index.html" aria-label="KRD Websmith home">
+    <span class="brand-mark">KRD</span>
+    <span class="brand-copy"><strong>KRD WEBSMITH</strong><small>WEB DESIGN / DEVELOPMENT</small></span>
+  </a>
+  <nav class="desktop-nav" aria-label="Primary navigation"><a class="active" href="work.html">Work</a><a class="" href="services.html">Services</a><a class="" href="process.html">Process</a><a class="" href="audit.html">Audit</a><a class="" href="about.html">About</a></nav>
+  <div class="header-action">
+    <a class="header-cta" href="contact.html">Start a project <span>↗</span></a>
+    <button id="menuToggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</header>
+<div id="mobileMenu" class="mobile-menu">
+  <nav><a href="work.html"><span>Work</span><small>01</small></a><a href="services.html"><span>Services</span><small>02</small></a><a href="process.html"><span>Process</span><small>03</small></a><a href="audit.html"><span>Audit</span><small>04</small></a><a href="about.html"><span>About</span><small>05</small></a><a href="contact.html"><span>Contact</span><small>06</small></a></nav>
+</div>
+<main id="main" class="shell"><div class="breadcrumbs"><a href="index.html">Home</a><span>/</span><span>Work</span></div><section class="page-hero"><div class="page-hero-grid"><div><div class="kicker">Selected work</div><h1>Built to fit<br><em>the business.</em></h1></div><div class="page-hero-aside"><p class="body-copy">Each project changes because the customer, offer, tone, and conversion goal change. These are concept studies built to demonstrate range.</p><div class="page-actions button-row"><a class="button dark" href="contact.html">Start a project <span>↗</span></a><a class="button" href="services.html">View services <span>→</span></a></div></div></div></section>
+<section class="section"><div class="work-stack">
+<article class="work-item reveal"><div class="work-photo image-frame"><img src="https://images.pexels.com/photos/28995187/pexels-photo-28995187.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Apex Auto Detailing"><div class="image-label invert-label">01 / AUTOMOTIVE</div></div><div class="work-copy"><div class="kicker">Performance / premium service</div><h2>APEX Auto Detailing</h2><p class="body-copy">A performance-led concept that makes a local detailing business feel more premium, focused, and easier to book.</p><div class="button-row"><a class="button dark" href="project-apex.html">Open case study <span>↗</span></a></div></div></article>
+<article class="work-item reveal"><div class="work-photo image-frame"><img src="https://images.unsplash.com/photo-1686671805337-7d8aa64b965f?auto=format&fit=crop&w=1800&q=88" alt="Noir House"><div class="image-label invert-label">02 / BARBERING</div></div><div class="work-copy"><div class="kicker">Editorial / booking</div><h2>NOIR HOUSE</h2><p class="body-copy">A quieter, editorial barbershop direction built around taste, service clarity, and a cleaner booking experience.</p><div class="button-row"><a class="button dark" href="project-noir.html">Open case study <span>↗</span></a></div></div></article>
+<article class="work-item reveal"><div class="work-photo image-frame"><img src="https://images.squarespace-cdn.com/content/v1/55304fb5e4b00c29c94de6b3/f5a239d9-2dd5-49bb-8a9d-e895d165b5a9/IMG_1510%2B3.jpg" alt="Evercrest Outdoor"><div class="image-label invert-label">03 / LANDSCAPE</div></div><div class="work-copy"><div class="kicker">High-ticket service / lead qualification</div><h2>EVERCREST Outdoor</h2><p class="body-copy">A landscape construction concept designed to build trust before the first call and attract more serious project inquiries.</p><div class="button-row"><a class="button dark" href="project-evercrest.html">Open case study <span>↗</span></a></div></div></article>
+</div></section>
+<section class="next-step"><div><div class="meta">Next step</div><h3>Seen enough? Find the right package or start the conversation.</h3></div><div class="button-row"><a class="button" href="services.html#recommender">Recommend my package</a><a class="button dark" href="contact.html">Start a project ↗</a></div></section>
+</main>
+<footer class="site-footer">
+  <div class="shell footer-main">
+    <div>
+      <div class="kicker">KRD WEBSMITH</div>
+      <h2>Make the website<br>earn its place.</h2>
+    </div>
+    <div class="footer-col"><span>Explore</span><a href="work.html">Work</a><a href="services.html">Services</a><a href="process.html">Process</a><a href="audit.html">Website audit</a></div>
+    <div class="footer-col"><span>Contact</span><a href="about.html">About</a><a href="contact.html">Start a project</a><a href="mailto:hello@krdwebsmith.com">hello@krdwebsmith.com</a></div>
+  </div>
+  <div class="footer-bottom"><span>© <span id="year"></span> KRD Websmith</span><span>Kitchener, Ontario / Remote</span></div>
+</footer>
+<script src="script.js"></script></body></html>
