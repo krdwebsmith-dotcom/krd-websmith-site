@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>APEX Auto Detailing — Ceramic Coating &amp; Paint Correction, Burlington ON</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box}
+  :root{
+    --ink:#0C0D0F;
+    --panel:#14161A;
+    --panel-2:#1B1E23;
+    --line:#2A2E35;
+    --fg:#EEF0F3;
+    --mut:#9AA1AC;
+    --acc:#FF4D0A;
+    --acc-dim:#C63A06;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --disp:"Saira Condensed",Impact,sans-serif;
+    --body:"Barlow",system-ui,sans-serif;
+  }
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--ink);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3,h4{font-family:var(--disp);font-weight:800;text-transform:uppercase;line-height:.92;letter-spacing:-.005em;margin:0}
+  p{margin:0}
+  .wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 32px}
+  .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--acc)}
+  .kicker.mut{color:var(--mut)}
+  .rule{height:1px;background:var(--line);border:0;margin:0}
+
+  /* header */
+  header{position:sticky;top:0;z-index:40;background:rgba(12,13,15,.94);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;gap:36px;height:74px}
+  .brand{display:flex;align-items:center;gap:11px;margin-right:auto}
+  .brand svg{width:30px;height:30px;color:var(--acc);flex:none}
+  .brand b{font-family:var(--disp);font-size:25px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;white-space:nowrap}
+  .brand b span{color:var(--acc)}
+  nav{display:flex;gap:30px}
+  nav a{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);padding:6px 0;border-bottom:2px solid transparent}
+  nav a:hover,nav a.on{color:#fff;border-color:var(--acc)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--disp);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:15px;padding:13px 22px;background:var(--acc);color:#0B0B0C;border:0;cursor:pointer;clip-path:polygon(9px 0,100% 0,100% calc(100% - 9px),calc(100% - 9px) 100%,0 100%,0 9px)}
+  .btn:hover{background:#fff}
+  .btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+  .btn.ghost:hover{border-color:var(--acc);color:var(--acc);background:transparent}
+  .burger{display:none;width:42px;height:42px;border:1px solid var(--line);background:transparent;padding:0;align-items:center;justify-content:center}
+  .burger i{display:block;width:18px;height:2px;background:var(--fg);box-shadow:0 -6px 0 var(--fg),0 6px 0 var(--fg)}
+
+  /* hero */
+  .hero{position:relative;min-height:640px;display:flex;align-items:flex-end;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero picture{position:absolute;inset:0;display:block}
+  .hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.85) contrast(1.08)}
+  .hero .veil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,10,12,.96) 0%,rgba(9,10,12,.82) 42%,rgba(9,10,12,.15) 100%)}
+  .hero .wrap{position:relative;padding-top:110px;padding-bottom:56px}
+  .hero h1{font-size:clamp(46px,7.6vw,104px);max-width:14ch}
+  .hero h1 em{font-style:normal;color:var(--acc);display:block}
+  .hero p.lede{max-width:44ch;color:#C8CCD3;margin-top:22px;font-size:19px}
+  .hero .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+  .stats{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--line);margin-top:52px}
+  .stats div{flex:1 1 150px;padding:18px 22px 4px 0}
+  .stats b{display:block;font-family:var(--disp);font-size:38px;font-weight:800;line-height:1}
+  .stats span{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut)}
+
+  /* marquee strip */
+  .strip{background:var(--acc);color:#0B0B0C;overflow:hidden;padding:11px 0}
+  .strip ul{display:flex;gap:44px;margin:0;padding:0 32px;list-style:none;font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;white-space:nowrap;overflow:hidden}
+
+  section{padding:104px 0}
+  .sechead{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;margin-bottom:46px}
+  .sechead h2{font-size:clamp(34px,4.4vw,58px)}
+  .sechead p{color:var(--mut);max-width:38ch}
+
+  /* services */
+  .svc{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .svc article{background:var(--panel);padding:34px 28px 30px}
+  .svc article:hover{background:var(--panel-2)}
+  .svc .n{font-family:var(--mono);font-size:11px;color:var(--acc);letter-spacing:.2em}
+  .svc h3{font-size:26px;margin:16px 0 12px}
+  .svc p{color:var(--mut);font-size:15.5px}
+  .svc ul{margin:18px 0 0;padding:0;list-style:none;font-size:14.5px;color:#C0C6CE}
+  .svc li{padding:7px 0 7px 18px;border-top:1px solid var(--line);position:relative}
+  .svc li::before{content:"";position:absolute;left:0;top:15px;width:7px;height:7px;background:var(--acc)}
+
+  /* table */
+  .pkg{background:var(--panel);border:1px solid var(--line)}
+  .tblwrap{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;min-width:620px}
+  th,td{text-align:left;padding:18px 20px;border-bottom:1px solid var(--line);font-size:15px}
+  thead th{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);background:#101216;vertical-align:bottom}
+  thead th b{display:block;font-family:var(--disp);font-size:23px;letter-spacing:.06em;color:var(--fg);margin-bottom:4px}
+  thead th.best b{color:var(--acc)}
+  tbody th{font-weight:500;color:#D6DAE0;font-family:var(--body);font-size:15px}
+  td{color:var(--mut);font-family:var(--mono);font-size:13px}
+  td.y{color:var(--fg)}
+  td.y::before{content:"■ ";color:var(--acc)}
+  tr:last-child td,tr:last-child th{border-bottom:0}
+  .price td,.price th{background:#101216;border-top:1px solid var(--line)}
+  .price td b{font-family:var(--disp);font-size:30px;color:var(--fg);letter-spacing:.02em}
+  .price td span{display:block;font-size:11px;color:var(--mut)}
+  .mcards{display:none}
+  .mcard{background:var(--panel);border:1px solid var(--line);padding:22px 20px;margin-bottom:14px}
+  .mcard.best{border-color:var(--acc)}
+  .mcard header{position:static;background:none;border:0;display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:14px}
+  .mcard h3{font-size:24px}
+  .mcard .p{font-family:var(--disp);font-size:26px;font-weight:800;color:var(--acc)}
+  .mcard .dur{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);margin-bottom:12px}
+  .mcard ul{list-style:none;margin:0;padding:0;font-size:14.5px;color:#C6CBD3}
+  .mcard li{padding:9px 0 9px 18px;border-top:1px solid var(--line);position:relative}
+  .mcard li::before{content:"";position:absolute;left:0;top:17px;width:6px;height:6px;background:var(--acc)}
+  .note{font-family:var(--mono);font-size:12px;color:var(--mut);margin-top:16px;letter-spacing:.04em}
+
+  /* gallery */
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .gal figure{position:relative;margin:0;overflow:hidden;background:var(--panel)}
+  .gal figure.big{grid-column:span 2;grid-row:span 2}
+  .gal img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+  .gal figure.big img{aspect-ratio:1/1}
+  .gal figcaption{position:absolute;left:0;bottom:0;right:0;padding:14px 16px;background:linear-gradient(to top,rgba(8,9,11,.92),transparent);font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+  .gal figcaption b{color:var(--acc);font-weight:500}
+
+  /* trust */
+  .why{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .why .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
+  .why h2{font-size:clamp(32px,4vw,52px)}
+  .why .pts{margin:30px 0 0;padding:0;list-style:none}
+  .why .pts li{display:flex;gap:18px;padding:22px 0;border-top:1px solid var(--line)}
+  .why .pts b{font-family:var(--mono);font-size:12px;color:var(--acc);padding-top:4px;flex:none}
+  .why .pts h4{font-size:21px;margin-bottom:6px}
+  .why .pts p{color:var(--mut);font-size:15px}
+  .why figure{margin:0;position:relative}
+  .why figure img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  .quote{border-left:2px solid var(--acc);padding:2px 0 2px 20px;margin-top:26px}
+  .quote p{font-family:var(--disp);font-size:22px;line-height:1.25;text-transform:uppercase;font-weight:600}
+  .quote span{font-family:var(--mono);font-size:11px;color:var(--mut);letter-spacing:.16em;text-transform:uppercase}
+
+  /* booking */
+  .book .grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px}
+  .info dl{margin:26px 0 0;display:grid;grid-template-columns:1fr;gap:0}
+  .info dt{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);border-top:1px solid var(--line);padding-top:14px}
+  .info dd{margin:0 0 20px;font-size:16.5px;color:var(--fg)}
+  .info dd b{font-family:var(--disp);font-size:24px;letter-spacing:.04em}
+  form{background:var(--panel);border:1px solid var(--line);padding:34px 32px 32px}
+  .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);margin-bottom:8px}
+  input,select,textarea{width:100%;background:#0E1013;border:1px solid var(--line);color:var(--fg);font-family:var(--body);font-size:15.5px;padding:13px 14px;border-radius:0}
+  input::placeholder,textarea::placeholder{color:#5C636D}
+  input:focus,select:focus,textarea:focus{outline:0;border-color:var(--acc)}
+  .full{grid-column:1/-1}
+  textarea{min-height:104px;resize:vertical}
+  .radios{display:flex;flex-wrap:wrap;gap:8px}
+  .radios span{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;padding:10px 14px;border:1px solid var(--line);color:var(--mut)}
+  .radios span.sel{border-color:var(--acc);color:var(--acc);background:rgba(255,77,10,.08)}
+  form .btn{width:100%;margin-top:6px;padding:16px}
+  .fine{font-family:var(--mono);font-size:11px;color:#6B727C;margin-top:14px;letter-spacing:.04em}
+
+  footer{background:#08090B;border-top:1px solid var(--line);padding:64px 0 30px}
+  .fgrid2{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+  footer h5{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);margin:0 0 16px}
+  footer ul{margin:0;padding:0;list-style:none;font-size:15px;color:#B4BAC3}
+  footer li{margin-bottom:9px}
+  footer li a:hover{color:var(--acc)}
+  .fbot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:52px;padding-top:22px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6B727C}
+
+  @media(max-width:1024px){
+    .svc{grid-template-columns:1fr 1fr}
+    .why .grid,.book .grid{grid-template-columns:1fr;gap:44px}
+    .fgrid2{grid-template-columns:1fr 1fr}
+    .gal{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(max-width:760px){
+    body{font-size:16px}
+    .wrap{padding:0 20px}
+    nav,.bar .btn{display:none}
+    .burger{display:flex}
+    .bar{height:64px;gap:16px}
+    .brand b{font-size:21px}
+    section{padding:64px 0}
+    .hero{min-height:0;display:block;background:var(--ink)}
+    .hero picture{position:relative;height:300px}
+    .hero img.bg{object-position:50% 58%}
+    .hero .veil{inset:0 0 auto;height:300px;background:linear-gradient(0deg,#0C0D0F 2%,rgba(12,13,15,.55) 55%,rgba(12,13,15,.25) 100%)}
+    .hero .wrap{padding-top:26px;padding-bottom:40px}
+    .tblwrap{display:none}
+    .pkg{border:0;background:none}
+    .mcards{display:block}
+    .hero h1{font-size:44px;max-width:none}
+    .hero p.lede{font-size:16.5px}
+    .hero .acts .btn{flex:1 1 100%}
+    .stats div{flex:1 1 50%;padding-right:12px}
+    .stats b{font-size:30px}
+    .sechead{flex-direction:column;align-items:flex-start;gap:14px;margin-bottom:28px}
+    .svc{grid-template-columns:1fr}
+    .gal{grid-template-columns:1fr 1fr;gap:8px}
+    .gal figcaption{padding:26px 12px 12px;background:linear-gradient(to top,rgba(8,9,11,.96) 30%,rgba(8,9,11,.55) 70%,transparent)}
+    .gal figure.big{grid-column:span 2;grid-row:auto}
+    .fgrid,.fgrid2{grid-template-columns:1fr}
+    form{padding:24px 20px}
+    .strip ul{gap:26px;padding:0 20px}
+    .why .pts li{flex-direction:column;gap:6px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 32 32" fill="none" aria-label="APEX logo"><path d="M16 3 29 29H21.5L16 16.6 10.5 29H3L16 3Z" fill="currentColor"/><path d="M16 20.5 20 29H12l4-8.5Z" fill="#0C0D0F"/></svg>
+      <b>APEX<span>.</span></b>
+    </a>
+    <nav>
+      <a href="#services" class="on">Services</a>
+      <a href="#packages">Packages</a>
+      <a href="#work">Work</a>
+      <a href="#why">Why Apex</a>
+      <a href="#book">Contact</a>
+    </nav>
+    <a class="btn" href="#book">Book a slot</a>
+    <button class="burger" aria-label="Menu"><i></i></button>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <picture>
+    <source media="(max-width:760px)" srcset="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&amp;h=1400&amp;fit=crop&amp;crop=entropy&amp;q=80&amp;auto=format">
+    <img class="bg" src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=2000&amp;q=80&amp;auto=format&amp;fit=crop" alt="Sports car under shop lighting">
+  </picture>
+  <div class="veil"></div>
+  <div class="wrap">
+    <p class="kicker">Burlington · Oakville · Hamilton — Est. 2016</p>
+    <h1>Paint correction<em>done properly.</em></h1>
+    <p class="lede">A two-bay studio, controlled lighting, and up to 22 hours on a single vehicle. Ceramic coatings applied by hand, measured with a paint depth gauge, and warrantied for nine years.</p>
+    <div class="acts">
+      <a class="btn" href="#book">Get a quote</a>
+      <a class="btn ghost" href="#packages">See packages &amp; pricing</a>
+    </div>
+    <div class="stats">
+      <div><b>1,480+</b><span>Vehicles finished</span></div>
+      <div><b>9 yr</b><span>Coating warranty</span></div>
+      <div><b>4.9★</b><span>317 Google reviews</span></div>
+      <div><b>22 h</b><span>Avg. correction time</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="strip">
+  <ul>
+    <li>Ceramic Pro Certified</li><li>——</li><li>Gtechniq Accredited</li><li>——</li><li>XPEL Paint Protection Film</li><li>——</li><li>Insurance &amp; Dealer Work</li><li>——</li><li>Free Pickup Within 25 km</li>
+  </ul>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sechead">
+      <h2>What happens<br>in the bay</h2>
+      <p>Four services, no bundles you didn't ask for. Every job starts with a paint reading and a written condition report before a pad ever touches the clear coat.</p>
+    </div>
+    <div class="svc">
+      <article>
+        <div class="n">01 / CORRECTION</div>
+        <h3>Multi-stage polish</h3>
+        <p>Swirls, wash marks and dealer sanding removed under 6000K inspection lighting.</p>
+        <ul><li>Paint depth mapped, 40+ readings</li><li>Compound, refine, finish</li><li>Trim &amp; glass decontaminated</li></ul>
+      </article>
+      <article>
+        <div class="n">02 / COATING</div>
+        <h3>Ceramic protection</h3>
+        <p>9H coatings on paint, wheels, glass and trim. Cured 12 hours in-shop, never outdoors.</p>
+        <ul><li>2 to 9 year systems</li><li>Wheels off for barrel coating</li><li>Annual inspection included</li></ul>
+      </article>
+      <article>
+        <div class="n">03 / FILM</div>
+        <h3>Paint protection film</h3>
+        <p>Computer-cut XPEL Ultimate Plus on the panels that actually take rock damage.</p>
+        <ul><li>Full front or track package</li><li>Wrapped edges, no visible lines</li><li>10 year film warranty</li></ul>
+      </article>
+      <article>
+        <div class="n">04 / INTERIOR</div>
+        <h3>Interior reset</h3>
+        <p>Hot-water extraction, leather rehydration, and ozone treatment for smoke or pet odour.</p>
+        <ul><li>Seats removed on request</li><li>pH-neutral leather care</li><li>Headliner safe method</li></ul>
+      </article>
+      <article>
+        <div class="n">05 / MAINTENANCE</div>
+        <h3>Coating maintenance wash</h3>
+        <p>Two-bucket, pH-neutral, touchless dry. Keeps the warranty valid and the gloss honest.</p>
+        <ul><li>Members from $95</li><li>Every 8 to 10 weeks</li><li>Saturday drop-off slots</li></ul>
+      </article>
+      <article>
+        <div class="n">06 / TRACK</div>
+        <h3>Track day prep &amp; return</h3>
+        <p>Pre-event tape-up and post-event rubber, brake dust and bug removal for CTMP regulars.</p>
+        <ul><li>Wheel face &amp; barrel deep clean</li><li>Iron removal, tar removal</li><li>Same-week turnaround</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="packages">
+  <div class="wrap">
+    <div class="sechead">
+      <h2>Packages<br>&amp; pricing</h2>
+      <p>Pricing shown for a mid-size sedan in average condition. Trucks, SUVs and vehicles needing heavy correction are quoted after inspection.</p>
+    </div>
+    <div class="pkg" id="pricing">
+      <div class="tblwrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Included</th>
+              <th scope="col"><b>Essential</b>1 day in shop</th>
+              <th scope="col" class="best"><b>Signature</b>2–3 days · most booked</th>
+              <th scope="col"><b>Concours</b>5 days · by appointment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Chemical decontamination &amp; clay</th><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+            <tr><th scope="row">Paint depth measurement report</th><td>—</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+            <tr><th scope="row">Polishing stages</th><td>One (gloss enhance)</td><td class="y">Two stage</td><td class="y">Three stage + wet sanding</td></tr>
+            <tr><th scope="row">Ceramic coating</th><td>2 yr — paint only</td><td class="y">5 yr — paint, glass, wheels</td><td class="y">9 yr — full vehicle, wheels off</td></tr>
+            <tr><th scope="row">Interior detail</th><td>Vacuum &amp; wipe-down</td><td class="y">Full extraction</td><td class="y">Full extraction + leather recolour touch-up</td></tr>
+            <tr><th scope="row">Engine bay dress</th><td>—</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+            <tr><th scope="row">Maintenance washes included</th><td>—</td><td>1 × 6 months</td><td class="y">2 × 12 months</td></tr>
+            <tr class="price">
+              <th scope="row">From</th>
+              <td><b>$690</b><span>Deposit $150</span></td>
+              <td><b>$1,450</b><span>Deposit $300</span></td>
+              <td><b>$3,200</b><span>Deposit $600</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="mcards">
+      <div class="mcard">
+        <header><h3>Essential</h3><span class="p">$690</span></header>
+        <div class="dur">1 day in shop · deposit $150</div>
+        <ul>
+          <li>Chemical decontamination &amp; clay</li>
+          <li>One-stage gloss enhancement polish</li>
+          <li>2 year ceramic coating — paint only</li>
+          <li>Interior vacuum &amp; wipe-down</li>
+        </ul>
+      </div>
+      <div class="mcard best">
+        <header><h3>Signature</h3><span class="p">$1,450</span></header>
+        <div class="dur">2–3 days · most booked · deposit $300</div>
+        <ul>
+          <li>Paint depth measurement report</li>
+          <li>Two-stage correction</li>
+          <li>5 year coating — paint, glass, wheels</li>
+          <li>Full interior extraction</li>
+          <li>Engine bay dress</li>
+          <li>One maintenance wash within 6 months</li>
+        </ul>
+      </div>
+      <div class="mcard">
+        <header><h3>Concours</h3><span class="p">$3,200</span></header>
+        <div class="dur">5 days · by appointment · deposit $600</div>
+        <ul>
+          <li>Three-stage correction + wet sanding</li>
+          <li>9 year coating — full vehicle, wheels off</li>
+          <li>Extraction + leather recolour touch-up</li>
+          <li>Engine bay dress</li>
+          <li>Two maintenance washes over 12 months</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">Prices in CAD, HST extra. Loaner vehicle available on Signature and Concours bookings. We do not upsell in the bay — anything found mid-job is quoted before we continue.</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="work">
+  <div class="wrap">
+    <div class="sechead">
+      <h2>Recent<br>work</h2>
+      <p>Shot in the bay under the same lighting we correct under — no filters, no wet-look sprays.</p>
+    </div>
+    <div class="gal">
+      <figure class="big">
+        <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=1400&amp;q=80&amp;auto=format&amp;fit=crop" alt="Red supercar after paint correction">
+        <figcaption><b>Concours</b> — 2019 Ferrari 488 · 3-stage + 9 yr coating</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=900&amp;q=80&amp;auto=format&amp;fit=crop" alt="Foam wash in progress">
+        <figcaption><b>Decon</b> — pH-neutral foam bath</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=900&amp;q=80&amp;auto=format&amp;fit=crop" alt="Black muscle car detailed">
+        <figcaption><b>Signature</b> — Shelby GT500</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?w=900&amp;q=80&amp;auto=format&amp;fit=crop" alt="White supercar with protective film">
+        <figcaption><b>Film</b> — full front PPF</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=900&amp;q=80&amp;auto=format&amp;fit=crop" alt="Red sports car outdoors after detailing">
+        <figcaption><b>Signature</b> — AMG GT, 2 stage</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=900&amp;q=80&amp;auto=format&amp;fit=crop" alt="Yellow performance car">
+        <figcaption><b>Essential</b> — gloss enhance</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=900&amp;q=80&amp;auto=format&amp;fit=crop" alt="Blue muscle car">
+        <figcaption><b>Coating</b> — 5 yr system</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=900&amp;q=80&amp;auto=format&amp;fit=crop" alt="Silver sedan on an open road">
+        <figcaption><b>Maintenance</b> — 18 months in</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=900&amp;q=80&amp;auto=format&amp;fit=crop" alt="Restored classic Volkswagen Beetle">
+        <figcaption><b>Restoration</b> — 1971 Beetle, single stage paint</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap grid">
+    <div>
+      <p class="kicker">Why Apex</p>
+      <h2>Two cars a day.<br>Never five.</h2>
+      <ul class="pts">
+        <li><b>01</b><div><h4>Your car is not on a conveyor</h4><p>We book a maximum of two vehicles per day across two bays. That's why a Signature takes three days instead of an afternoon.</p></div></li>
+        <li><b>02</b><div><h4>Written condition report, before and after</h4><p>Photographed defects, paint thickness readings by panel, and a note on anything we recommend leaving alone.</p></div></li>
+        <li><b>03</b><div><h4>Warranty that we service ourselves</h4><p>Coatings are inspected annually in-shop. If gloss or beading falls off inside the term, we re-apply the affected panels at no charge.</p></div></li>
+        <li><b>04</b><div><h4>Licensed, insured, and garage-kept</h4><p>$2M liability, climate-controlled storage, and 24-hour camera coverage. Your keys never leave the building.</p></div></li>
+      </ul>
+    </div>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1100&amp;q=80&amp;auto=format&amp;fit=crop" alt="Performance sedan at speed">
+      <div class="quote">
+        <p>“They found sanding marks the dealer left on a brand new car and fixed them before I noticed.”</p>
+        <span>Dev R. — 2024 Porsche Panamera · Oakville</span>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap grid">
+    <div class="info">
+      <p class="kicker">Book the bay</p>
+      <h2 style="font-size:clamp(32px,4vw,50px)">Tell us what<br>you're driving</h2>
+      <p style="color:var(--mut);margin-top:18px">Send the details and we'll come back within one business day with a firm price and the next two open slots. Inspections are free and take about twenty minutes.</p>
+      <dl>
+        <dt>Shop</dt><dd>1174 Fairview Street, Unit 4<br>Burlington, ON L7S 1H8</dd>
+        <dt>Phone</dt><dd><b>(905) 555-0142</b></dd>
+        <dt>Email</dt><dd>bay@apexdetailing.ca</dd>
+        <dt>Hours</dt><dd>Mon–Fri 8:00–18:00 · Sat 9:00–15:00<br>Sunday — closed (drop-off by arrangement)</dd>
+      </dl>
+    </div>
+    <form onsubmit="return false">
+      <div class="fgrid">
+        <div><label for="n">Name</label><input id="n" placeholder="Alex Moreau"></div>
+        <div><label for="p">Phone</label><input id="p" placeholder="(905) 000-0000"></div>
+        <div><label for="v">Vehicle</label><input id="v" placeholder="2021 BMW M3 Competition"></div>
+        <div><label for="c">Colour</label><input id="c" placeholder="Isle of Man Green"></div>
+        <div class="full"><label for="s">Service interest</label>
+          <select id="s"><option>Signature — 2 stage + 5 yr coating</option><option>Essential — gloss enhance + 2 yr coating</option><option>Concours — 3 stage + 9 yr coating</option><option>Paint protection film</option><option>Interior reset only</option></select>
+        </div>
+        <div class="full"><label>Earliest drop-off</label>
+          <div class="radios"><span class="sel">This week</span><span>Next week</span><span>Within a month</span><span>Flexible</span></div>
+        </div>
+        <div class="full"><label for="m">Condition notes</label><textarea id="m" placeholder="Two years of automatic car washes, swirls in direct sun, small stone chips on the hood."></textarea></div>
+      </div>
+      <button class="btn">Request my quote</button>
+      <p class="fine">No deposit required to book an inspection. We reply Mon–Fri, usually same day.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid2">
+      <div>
+        <a class="brand" href="#top" style="margin-bottom:16px">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3 29 29H21.5L16 16.6 10.5 29H3L16 3Z" fill="currentColor"/><path d="M16 20.5 20 29H12l4-8.5Z" fill="#08090B"/></svg>
+          <b>APEX<span>.</span></b>
+        </a>
+        <p style="color:#8A9099;font-size:15px;max-width:34ch">Appearance studio for daily drivers, weekend cars and everything in between. Burlington, Ontario.</p>
+      </div>
+      <div><h5>Services</h5><ul><li><a href="#services">Paint correction</a></li><li><a href="#services">Ceramic coating</a></li><li><a href="#services">Protection film</a></li><li><a href="#services">Interior reset</a></li></ul></div>
+      <div><h5>Service area</h5><ul><li>Burlington</li><li>Oakville &amp; Milton</li><li>Hamilton &amp; Ancaster</li><li>Mississauga (pickup)</li></ul></div>
+      <div><h5>Shop</h5><ul><li>(905) 555-0142</li><li>bay@apexdetailing.ca</li><li>1174 Fairview St, Unit 4</li><li>Mon–Sat</li></ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 Apex Auto Detailing Inc. — Concept site</span>
+      <span>Privacy · Warranty terms · Gift cards</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

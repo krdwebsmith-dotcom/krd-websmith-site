@@ -1,68 +1,282 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>APEX Auto Detailing — KRD Websmith</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css"><style>
-.project-hero{
-  min-height:82svh;
-  padding-top:82px;
-  position:relative;
-  display:flex;
-  align-items:flex-end;
-  overflow:hidden;
-  border-bottom:1px solid var(--ink);
-}
-.project-hero img{position:absolute;inset:0;height:100%;object-fit:cover;filter:saturate(.65) brightness(.58)}
-.project-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(17,17,17,.82),rgba(17,17,17,.04) 58%)}
-.project-hero-copy{position:relative;z-index:2;width:100%;padding-bottom:55px;color:var(--paper)}
-.project-hero-copy .kicker{color:#8CA8F1}
-.project-hero-copy h1{margin:8px 0 0;font:500 clamp(66px,9.5vw,148px)/.84 "Cormorant Garamond",serif;letter-spacing:-.07em}
-.project-hero-copy p{max-width:650px;color:#D1CAC0}
-.project-content{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}
-.case-list{border-top:1px solid var(--ink);margin-top:70px}
-.case-row{padding:27px 0;display:grid;grid-template-columns:70px 1fr 1fr;gap:30px;border-bottom:1px solid var(--line)}
-.case-row span{color:var(--blue);font:600 8px "IBM Plex Mono",monospace}
-.case-row h3{margin:0;font:500 34px "Cormorant Garamond",serif}
-.case-row p{margin:0}
-.project-wide{margin-top:70px;height:660px}
-.project-nav{margin-top:38px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-@media(max-width:850px){
-  .project-content{grid-template-columns:1fr}
-  .case-row{grid-template-columns:42px 1fr}
-  .case-row p{grid-column:2}
-  .project-wide{height:460px}
-}
-</style></head><body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>APEX Auto Detailing — concept project by KRD Websmith</title>
+  <meta name="description" content="A performance-led concept that makes a local detailing business feel more premium, focused, and easier to book. A concept website project by KRD Websmith, Kitchener, Ontario.">
+  <link rel="canonical" href="https://krdwebsmith.com/project-apex.html">
+  <meta name="theme-color" content="#F4F1EA">
+  <meta name="author" content="KRD Websmith">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KRD Websmith">
+  <meta property="og:title" content="APEX Auto Detailing — concept project by KRD Websmith">
+  <meta property="og:description" content="A performance-led concept that makes a local detailing business feel more premium, focused, and easier to book. A concept website project by KRD Websmith, Kitchener, Ontario.">
+  <meta property="og:url" content="https://krdwebsmith.com/project-apex.html">
+  <meta property="og:locale" content="en_CA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="APEX Auto Detailing — concept project by KRD Websmith">
+  <meta name="twitter:description" content="A performance-led concept that makes a local detailing business feel more premium, focused, and easier to book. A concept website project by KRD Websmith, Kitchener, Ontario.">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=IBM+Plex+Mono:wght@500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=IBM+Plex+Mono:wght@500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=IBM+Plex+Mono:wght@500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"></noscript>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header id="siteHeader" class="site-header">
-  <a class="brand" href="index.html" aria-label="KRD Websmith home">
-    <span class="brand-mark">KRD</span>
-    <span class="brand-copy"><strong>KRD WEBSMITH</strong><small>WEB DESIGN / DEVELOPMENT</small></span>
+  <a class="brand" href="index.html" aria-label="KRD Websmith — home">
+    <span class="brand-mark" aria-hidden="true">KRD</span>
+    <span class="brand-copy"><strong>KRD Websmith</strong><small>Web design / development</small></span>
   </a>
-  <nav class="desktop-nav" aria-label="Primary navigation"><a class="active" href="work.html">Work</a><a class="" href="services.html">Services</a><a class="" href="process.html">Process</a><a class="" href="audit.html">Audit</a><a class="" href="about.html">About</a></nav>
+  <nav class="desktop-nav" aria-label="Primary"><a href="work.html">Work</a><a href="services.html">Services</a><a href="process.html">Process</a><a href="about.html">About</a><a href="audit.html">Audit</a></nav>
   <div class="header-action">
-    <a class="header-cta" href="contact.html">Start a project <span>↗</span></a>
-    <button id="menuToggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+    <a class="header-cta" href="contact.html">Start a project <span aria-hidden="true">&#8599;</span></a>
+    <button id="menuToggle" class="menu-toggle" type="button" aria-label="Open menu"
+            aria-expanded="false" aria-controls="mobileMenu"><i></i><i></i></button>
   </div>
 </header>
+
 <div id="mobileMenu" class="mobile-menu">
-  <nav><a href="work.html"><span>Work</span><small>01</small></a><a href="services.html"><span>Services</span><small>02</small></a><a href="process.html"><span>Process</span><small>03</small></a><a href="audit.html"><span>Audit</span><small>04</small></a><a href="about.html"><span>About</span><small>05</small></a><a href="contact.html"><span>Contact</span><small>06</small></a></nav>
+  <nav aria-label="Mobile"><a href="work.html"><span>Work</span><small>01</small></a><a href="services.html"><span>Services</span><small>02</small></a><a href="process.html"><span>Process</span><small>03</small></a><a href="about.html"><span>About</span><small>04</small></a><a href="audit.html"><span>Audit</span><small>05</small></a><a href="contact.html"><span>Contact</span><small>06</small></a></nav>
+  <div class="mobile-menu-foot">
+    <span>KRD / Web studio</span>
+    <span>Kitchener / Ontario</span>
+    <span>hello@krdwebsmith.com</span>
+  </div>
 </div>
-<main id="main"><section class="project-hero"><img src="https://images.pexels.com/photos/28995187/pexels-photo-28995187.jpeg?auto=compress&cs=tinysrgb&w=2000" alt="APEX Auto Detailing project visual"><div class="project-hero-copy shell"><div class="kicker">AUTOMOTIVE / Concept project</div><h1>APEX Auto Detailing</h1><p class="body-copy">A performance-focused concept designed to make a local detailing company feel premium, credible, and easier to book.</p><div class="button-row"><a class="button light" href="contact.html?project=APEX%20Auto%20Detailing">Build something like this <span>↗</span></a><a class="button light" href="work.html">Back to work <span>←</span></a></div></div></section>
-<section class="section shell"><div class="project-content"><div><div class="kicker">The thinking</div><h2 class="display">Built around the problem,<br><em>not a template.</em></h2></div><div><p class="body-copy">A performance-focused concept designed to make a local detailing company feel premium, credible, and easier to book.</p><p class="body-copy">The goal is not to make every project look like KRD Websmith. The goal is to make each interface feel native to the business it represents.</p></div></div>
-<div class="case-list"><div class="case-row reveal"><span>01</span><h3>Challenge</h3><p class="body-copy">Detailing websites often use the same aggressive template language, which makes businesses blur together.</p></div><div class="case-row reveal"><span>02</span><h3>Direction</h3><p class="body-copy">Use strong typography, confident contrast, package clarity, and fewer but stronger calls to action.</p></div><div class="case-row reveal"><span>03</span><h3>Purpose</h3><p class="body-copy">Help customers understand the offer faster and make the brand feel worth a premium price.</p></div></div>
-<div class="project-wide image-frame reveal"><img src="https://images.pexels.com/photos/28995187/pexels-photo-28995187.jpeg?auto=compress&cs=tinysrgb&w=2000" alt="APEX Auto Detailing full project image"><div class="image-label">CONCEPT / VISUAL DIRECTION</div></div>
-<div class="project-nav"><a class="button" href="project-evercrest.html">← Evercrest</a><a class="button dark" href="contact.html?project=APEX%20Auto%20Detailing">Start a similar project ↗</a><a class="button" href="project-noir.html">Noir House →</a></div>
-</section></main>
+<main id="main">
+  <nav class="breadcrumbs shell" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">APEX Auto Detailing</span></nav>
+  <section class="page-hero shell">
+    <div class="page-hero-grid">
+      <div>
+        <p class="label">Project / 001 &nbsp;·&nbsp; Concept project</p>
+        <h1 class="display">APEX Auto Detailing</h1>
+      </div>
+      <div class="page-hero-aside">
+        <p class="body-copy">A performance-led concept that makes a local detailing business feel more premium, focused, and easier to book.</p>
+        <div class="page-actions button-row">
+          <a class="button dark" href="contact.html?project=APEX%20Auto%20Detailing">Build something like this <span aria-hidden="true">&#8599;</span></a>
+          <a class="button" href="work.html">Back to work <span aria-hidden="true">&#8592;</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight shell">
+    <div class="reveal mask">
+      <div class="browser ">
+  <div class="browser-bar">
+    <span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="browser-url">apexautodetailing.ca</span>
+    <span class="browser-dim">1440 × 900</span>
+  </div>
+  <img class="browser-shot" src="assets/shots/apex-desktop.webp" alt="APEX Auto Detailing concept homepage" width="1440" height="900" decoding="async">
+</div>
+      <p class="shot-caption"><span>Automotive / concept homepage</span><b>1440 × 900</b></p>
+    </div>
+  </section>
+
+  <section class="shell">
+    <dl class="metalist" style="grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0 40px">
+      <div><dt>Client</dt><dd>Concept project</dd></div>
+      <div><dt>Industry</dt><dd>Automotive</dd></div>
+      <div><dt>Role</dt><dd>Design + development</dd></div>
+      <div><dt>Year</dt><dd>2026</dd></div>
+      <div><dt>Status</dt><dd>Concept &mdash; not a commissioned build</dd></div>
+      <div><dt>Output</dt><dd>Responsive website</dd></div>
+    </dl>
+  </section>
+
+  <section class="section shell">
+    <div class="section-head">
+      <h2 class="display-sm reveal">Performance<br><em>documented.</em></h2>
+      <p class="body-copy section-note reveal" data-delay="1">The goal is not to make every project
+        look like KRD Websmith. The goal is to make each interface feel native to the business it
+        represents.</p>
+    </div>
+
+    <div class="doc" style="border-top:0">
+      <article class="case-chapter">
+        <div class="case-text reveal">
+          <p class="label">01 / Context</p>
+          <h2>What existed before</h2>
+          <p>Automotive businesses in this category typically run a template site or a social
+            profile. There was no prior KRD build to redesign, so this starts from the category
+            itself: what a customer actually needs to see before they commit.</p>
+        </div>
+        <div class="case-visual reveal" data-delay="1">
+          <div class="browser ">
+  <div class="browser-bar">
+    <span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="browser-url">apexautodetailing.ca</span>
+    <span class="browser-dim">1440 × 900</span>
+  </div>
+  <img class="browser-shot" src="assets/shots/apex-desktop.webp" alt="APEX Auto Detailing concept homepage above the fold" width="1440" height="900" loading="lazy" decoding="async">
+</div>
+          <p class="shot-caption"><span>Above the fold</span><b>1440 × 900</b></p>
+        </div>
+      </article>
+
+      <article class="case-chapter">
+        <div class="case-text reveal">
+          <p class="label">02 / Problem</p>
+          <h2>What was not working</h2>
+          <p>Detailing websites often use the same aggressive template language, which makes businesses blur together.</p>
+        </div>
+        <div class="case-visual reveal" data-delay="1">
+          <div class="browser ">
+  <div class="browser-bar">
+    <span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="browser-url">apexautodetailing.ca</span>
+    <span class="browser-dim">Detail</span>
+  </div>
+  <img class="browser-shot" src="assets/shots/apex-detail.webp" alt="Interface detail from the APEX Auto Detailing concept" width="1176" height="626" loading="lazy" decoding="async">
+</div>
+          <p class="shot-caption"><span>Interface detail</span><b>Crop</b></p>
+        </div>
+      </article>
+
+      <article class="case-chapter">
+        <div class="case-text reveal">
+          <p class="label">03 / Direction</p>
+          <h2>The design approach</h2>
+          <p>Use strong typography, confident contrast, package clarity, and fewer but stronger calls to action.</p>
+          <div class="archive-tags"><span>Charcoal + hot accent</span><span>Condensed display</span><span>Package table</span><span>Booking path</span></div>
+        </div>
+        <div class="case-visual reveal" data-delay="1">
+          <div class="browser scrolls" style="--vh:480px">
+  <div class="browser-bar">
+    <span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="browser-url">apexautodetailing.ca</span>
+    <span class="browser-dim">1440 × 900</span>
+  </div>
+  <div class="browser-viewport" style="--vh:480px"><img class="browser-shot" src="assets/shots/apex-desktop-full.webp" alt="APEX Auto Detailing concept, full page" width="1440" height="6274" loading="lazy" decoding="async"></div>
+</div>
+          <p class="shot-caption"><span>Full page / hover to scroll</span><b>1440 × 900</b></p>
+        </div>
+      </article>
+
+      <article class="case-chapter">
+        <div class="case-text reveal">
+          <p class="label">04 / Build</p>
+          <h2>How it was implemented</h2>
+          <p>Hand-written semantic HTML and CSS with a small amount of JavaScript. A single type and
+            spacing system, real photography, and no framework overhead — so the page stays fast and
+            the layout holds at every width.</p>
+          <dl class="metalist">
+            <div><dt>Markup</dt><dd>Semantic HTML</dd></div>
+            <div><dt>Styling</dt><dd>Hand-written CSS</dd></div>
+            <div><dt>Motion</dt><dd>Restrained, reduced-motion safe</dd></div>
+          </dl>
+        </div>
+        <div class="case-visual reveal" data-delay="1">
+          <div class="browser ">
+  <div class="browser-bar">
+    <span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="browser-url">apexautodetailing.ca</span>
+    <span class="browser-dim">Component</span>
+  </div>
+  <img class="browser-shot" src="assets/shots/apex-detail.webp" alt="Component detail from the APEX Auto Detailing concept" width="1176" height="626" loading="lazy" decoding="async">
+</div>
+          <p class="shot-caption"><span>Component / detail</span><b>Crop</b></p>
+        </div>
+      </article>
+
+      <article class="case-chapter">
+        <div class="case-text reveal">
+          <p class="label">05 / Mobile</p>
+          <h2>How it adapts</h2>
+          <p>The phone layout is designed, not stacked. Type scales down deliberately, touch targets
+            stay large, metadata compresses, and the primary action stays reachable without hunting.</p>
+        </div>
+        <div class="case-visual reveal" data-delay="1">
+          <div class="responsive-pair">
+            <div>
+              <div class="browser ">
+  <div class="browser-bar">
+    <span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="browser-url">apexautodetailing.ca</span>
+    <span class="browser-dim">1440 × 900</span>
+  </div>
+  <img class="browser-shot" src="assets/shots/apex-desktop.webp" alt="APEX Auto Detailing concept on desktop" width="1440" height="900" loading="lazy" decoding="async">
+</div>
+              <p class="shot-caption"><span>Desktop</span><b>1440 × 900</b></p>
+            </div>
+            <div>
+              <div class="device">
+  <div class="device-bar" aria-hidden="true"><span></span></div>
+  <img class="device-shot" src="assets/shots/apex-mobile.webp" alt="APEX Auto Detailing concept on a phone" width="390" height="844" loading="lazy" decoding="async">
+</div>
+              <p class="shot-caption"><span>Phone</span><b>390 × 844</b></p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case-chapter full">
+        <div class="case-text reveal" style="position:static">
+          <p class="label">06 / Result</p>
+          <h2>The finished website</h2>
+          <p class="measure">Help customers understand the offer faster and make the brand feel worth a premium price.</p>
+        </div>
+        <div class="case-visual reveal" data-delay="1">
+          <div class="browser scrolls" style="--vh:560px">
+  <div class="browser-bar">
+    <span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="browser-url">apexautodetailing.ca</span>
+    <span class="browser-dim">390 × 844</span>
+  </div>
+  <div class="browser-viewport" style="--vh:560px"><img class="browser-shot" src="assets/shots/apex-mobile-full.webp" alt="APEX Auto Detailing concept full mobile page" width="390" height="10232" loading="lazy" decoding="async"></div>
+</div>
+          <p class="shot-caption"><span>Full mobile page / hover to scroll</span><b>390 × 844</b></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="next-step shell">
+  <div>
+    <p class="meta">Archive</p>
+    <h3>Next project: EVERCREST Outdoor.</h3>
+  </div>
+  <div class="button-row"><a class="button" href="project-noir.html"><span aria-hidden="true">&#8592;</span> NOIR HOUSE</a><a class="button" href="project-evercrest.html">EVERCREST Outdoor <span aria-hidden="true">&#8594;</span></a><a class="button dark" href="contact.html?project=APEX%20Auto%20Detailing">Start a similar project <span aria-hidden="true">&#8599;</span></a></div>
+</section>
+</main>
 <footer class="site-footer">
   <div class="shell footer-main">
-    <div>
-      <div class="kicker">KRD WEBSMITH</div>
-      <h2>Make the website<br>earn its place.</h2>
+    <div class="footer-brand">
+      <p class="label">KRD Websmith</p>
+      <h2>KRD<br>Websmith</h2>
+      <p>Web design /<br>Kitchener, Ontario</p>
     </div>
-    <div class="footer-col"><span>Explore</span><a href="work.html">Work</a><a href="services.html">Services</a><a href="process.html">Process</a><a href="audit.html">Website audit</a></div>
-    <div class="footer-col"><span>Contact</span><a href="about.html">About</a><a href="contact.html">Start a project</a><a href="mailto:hello@krdwebsmith.com">hello@krdwebsmith.com</a></div>
+    <div class="footer-col">
+      <span>Explore</span><a href="work.html">Work</a><a href="services.html">Services</a><a href="process.html">Process</a><a href="about.html">About</a><a href="audit.html">Audit</a>
+    </div>
+    <div class="footer-col">
+      <span>Start</span>
+      <a href="contact.html">Start a project</a>
+      <a href="mailto:hello@krdwebsmith.com">hello@krdwebsmith.com</a>
+    </div>
   </div>
-  <div class="footer-bottom"><span>© <span id="year"></span> KRD Websmith</span><span>Kitchener, Ontario / Remote</span></div>
+  <div class="shell footer-tech">
+    <div><span>Edition</span><strong>KRD / Web edition</strong></div>
+    <div><span>Service</span><strong>Design + development</strong></div>
+    <div><span>Location</span><strong>Kitchener / Remote</strong></div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; <span id="year">2026</span> KRD Websmith</span>
+    <span>krdwebsmith.com</span>
+  </div>
 </footer>
-<script src="script.js"></script></body></html>
+
+<script src="script.js" defer></script>
+</body>
+</html>

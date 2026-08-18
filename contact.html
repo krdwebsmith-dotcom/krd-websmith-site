@@ -1,79 +1,250 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact — KRD Websmith</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css"><style>
-.contact-layout{display:grid;grid-template-columns:.72fr 1.28fr;gap:70px;align-items:start}
-.contact-info{position:sticky;top:110px}
-.contact-info p{max-width:480px}
-.contact-meta{margin-top:40px;border-top:1px solid var(--ink)}
-.contact-meta div{padding:14px 0;border-bottom:1px solid var(--line)}
-.contact-meta span{display:block;color:var(--blue);font:600 7px "IBM Plex Mono",monospace;text-transform:uppercase}
-.contact-meta strong{display:block;margin-top:5px;font:500 10px "IBM Plex Mono",monospace}
-.contact-form{border-top:1px solid var(--ink)}
-.progress{height:5px;background:#DDD7CC;margin-bottom:24px}
-.progress i{display:block;height:100%;width:0;background:var(--blue);transition:width .25s ease}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
-.contact-form label{display:block;padding:20px 0;border-bottom:1px solid var(--line)}
-.contact-form label>span{display:block;margin-bottom:10px;color:var(--blue);font:600 8px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.12em}
-.contact-form input,.contact-form textarea,.contact-form select{width:100%;border:0;background:transparent;padding:8px 0;outline:0;font-size:14px;color:var(--ink)}
-.contact-form textarea{resize:vertical}
-.field-error{min-height:12px;margin-top:5px;color:#9C2B20;font-size:8px}
-.submit{margin-top:24px}
-.form-status{margin-top:14px;font:500 9px "IBM Plex Mono",monospace}
-@media(max-width:900px){.contact-layout,.form-grid{grid-template-columns:1fr}.contact-info{position:static}}
-</style></head><body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — KRD Websmith</title>
+  <meta name="description" content="Start a website project with KRD Websmith. Tell me about the business, the current site, and what the new website should do better.">
+  <link rel="canonical" href="https://krdwebsmith.com/contact.html">
+  <meta name="theme-color" content="#F4F1EA">
+  <meta name="author" content="KRD Websmith">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KRD Websmith">
+  <meta property="og:title" content="Contact — KRD Websmith">
+  <meta property="og:description" content="Start a website project with KRD Websmith. Tell me about the business, the current site, and what the new website should do better.">
+  <meta property="og:url" content="https://krdwebsmith.com/contact.html">
+  <meta property="og:locale" content="en_CA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact — KRD Websmith">
+  <meta name="twitter:description" content="Start a website project with KRD Websmith. Tell me about the business, the current site, and what the new website should do better.">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=IBM+Plex+Mono:wght@500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=IBM+Plex+Mono:wght@500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=IBM+Plex+Mono:wght@500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"></noscript>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+
+    .contact-layout{display:grid;grid-template-columns:.74fr 1.26fr;
+      gap:clamp(32px,5vw,80px);align-items:start}
+    .contact-info{position:sticky;top:108px}
+    .contact-form{border-top:1px solid var(--rule)}
+    .progress{height:5px;background:var(--paper-3);margin-bottom:8px}
+    .progress i{display:block;height:100%;width:0;background:var(--blue);transition:width .3s var(--ease)}
+    .progress-meta{display:flex;justify-content:space-between;
+      font:600 10px var(--mono);text-transform:uppercase;letter-spacing:.12em;
+      color:var(--muted);margin-bottom:20px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(20px,3vw,36px)}
+    .contact-form label{display:block;padding:18px 0 16px;border-bottom:1px solid var(--line)}
+    .contact-form label > span{display:block;margin-bottom:10px;color:var(--blue);
+      font:600 10px var(--mono);text-transform:uppercase;letter-spacing:.13em}
+    .contact-form input,.contact-form textarea,.contact-form select{
+      width:100%;border:0;background:transparent;padding:10px 0;outline:0;
+      font-size:16px;line-height:1.5;color:var(--ink);min-height:30px}
+    .contact-form input:focus-visible,.contact-form textarea:focus-visible,
+    .contact-form select:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+    .contact-form textarea{resize:vertical;min-height:130px}
+    .contact-form select{cursor:pointer}
+    .field-error{min-height:15px;margin-top:6px;color:#9C2B20;
+      font:500 11px var(--mono);letter-spacing:.04em}
+    .submit{margin-top:26px;width:100%;max-width:340px}
+    .form-status{margin-top:16px;min-height:20px;
+      font:600 11px var(--mono);text-transform:uppercase;letter-spacing:.1em}
+    .form-status.ok{color:var(--blue)}
+    .form-status.bad{color:#9C2B20}
+    @media(max-width:1000px){
+      .contact-layout{grid-template-columns:1fr}
+      .contact-info{position:static}
+    }
+    @media(max-width:760px){
+      .form-grid{grid-template-columns:1fr}
+      .submit{max-width:none}
+    }
+
+  </style>
+</head>
+<body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header id="siteHeader" class="site-header">
-  <a class="brand" href="index.html" aria-label="KRD Websmith home">
-    <span class="brand-mark">KRD</span>
-    <span class="brand-copy"><strong>KRD WEBSMITH</strong><small>WEB DESIGN / DEVELOPMENT</small></span>
+  <a class="brand" href="index.html" aria-label="KRD Websmith — home">
+    <span class="brand-mark" aria-hidden="true">KRD</span>
+    <span class="brand-copy"><strong>KRD Websmith</strong><small>Web design / development</small></span>
   </a>
-  <nav class="desktop-nav" aria-label="Primary navigation"><a class="" href="work.html">Work</a><a class="" href="services.html">Services</a><a class="" href="process.html">Process</a><a class="" href="audit.html">Audit</a><a class="" href="about.html">About</a></nav>
+  <nav class="desktop-nav" aria-label="Primary"><a href="work.html">Work</a><a href="services.html">Services</a><a href="process.html">Process</a><a href="about.html">About</a><a href="audit.html">Audit</a></nav>
   <div class="header-action">
-    <a class="header-cta" href="contact.html">Start a project <span>↗</span></a>
-    <button id="menuToggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+    <a class="header-cta" href="contact.html">Start a project <span aria-hidden="true">&#8599;</span></a>
+    <button id="menuToggle" class="menu-toggle" type="button" aria-label="Open menu"
+            aria-expanded="false" aria-controls="mobileMenu"><i></i><i></i></button>
   </div>
 </header>
+
 <div id="mobileMenu" class="mobile-menu">
-  <nav><a href="work.html"><span>Work</span><small>01</small></a><a href="services.html"><span>Services</span><small>02</small></a><a href="process.html"><span>Process</span><small>03</small></a><a href="audit.html"><span>Audit</span><small>04</small></a><a href="about.html"><span>About</span><small>05</small></a><a href="contact.html"><span>Contact</span><small>06</small></a></nav>
+  <nav aria-label="Mobile"><a href="work.html"><span>Work</span><small>01</small></a><a href="services.html"><span>Services</span><small>02</small></a><a href="process.html"><span>Process</span><small>03</small></a><a href="about.html"><span>About</span><small>04</small></a><a href="audit.html"><span>Audit</span><small>05</small></a><a href="contact.html" aria-current="page"><span>Contact</span><small>06</small></a></nav>
+  <div class="mobile-menu-foot">
+    <span>KRD / Web studio</span>
+    <span>Kitchener / Ontario</span>
+    <span>hello@krdwebsmith.com</span>
+  </div>
 </div>
-<main id="main" class="shell"><div class="breadcrumbs"><a href="index.html">Home</a><span>/</span><span>Contact</span></div><section class="page-hero"><div class="page-hero-grid"><div><div class="kicker">Start a project</div><h1>Tell me<br><em>the problem.</em></h1></div><div class="page-hero-aside"><p class="body-copy">What does the business do, what exists now, and what should the new website do better?</p><div class="page-actions button-row"><a class="button" href="services.html#recommender">Not sure what you need? <span>→</span></a></div></div></div></section>
-<section class="section contact-layout"><div class="contact-info"><div class="kicker">Project details</div><h2 class="display">Good work deserves<br><em>a good front door.</em></h2><p class="body-copy">Starter projects begin around $300 CAD. Final quotes depend on scope, pages, content, integrations, and revisions.</p><div class="contact-meta"><div><span>Location</span><strong>Kitchener, Ontario</strong></div><div><span>Projects</span><strong>Local + remote</strong></div><div><span>Email</span><strong>hello@krdwebsmith.com</strong></div></div></div>
-<form id="contactForm" class="contact-form" novalidate>
-<div class="progress"><i id="progressFill"></i></div>
-<div class="form-grid">
-<label><span>Name</span><input name="name" required autocomplete="name"><div class="field-error"></div></label>
-<label><span>Business</span><input name="business" required autocomplete="organization"><div class="field-error"></div></label>
-<label><span>Email</span><input name="email" type="email" required autocomplete="email"><div class="field-error"></div></label>
-<label><span>Current website</span><input name="website" type="url" placeholder="https://"><div class="field-error"></div></label>
-<label><span>Project type</span><select name="type" required><option value="">Select one</option><option>New business website</option><option>Website redesign</option><option>Landing page</option><option>Custom build</option></select><div class="field-error"></div></label>
-<label><span>Budget</span><select name="budget" required><option value="">Select range</option><option>$300–$500</option><option>$500–$800</option><option>$800–$1,200</option><option>$1,200+</option></select><div class="field-error"></div></label>
-</div>
-<label><span>What do you need?</span><textarea name="message" rows="6" placeholder="Tell me about the business, current site, goals, pages, or features."></textarea><div class="field-error"></div></label>
-<button class="button dark submit" type="submit">Send project request <span>↗</span></button>
-<div class="form-status" id="status" role="status"></div>
-</form></section>
-<section class="next-step"><div><div class="meta">Need more context first?</div><h3>You can still explore before submitting anything.</h3></div><div class="button-row"><a class="button" href="work.html">Work</a><a class="button" href="services.html">Services</a><a class="button" href="process.html">Process</a></div></section>
+<main id="main">
+  <nav class="breadcrumbs shell" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Contact</span></nav>
+  <section class="page-hero shell">
+    <div class="page-hero-grid">
+      <div>
+        <p class="label">Start a project / Inquiry</p>
+        <h1 class="display">Have a business. <br class="brk">Need the site.
+          <em>Let&rsquo;s build it properly.</em></h1>
+      </div>
+      <div class="page-hero-aside">
+        <p class="body-copy">What does the business do, what exists now, and what should the new
+          website do better?</p>
+        <div class="page-actions button-row">
+          <a class="button" href="services.html#recommender">Not sure what you need? <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section shell contact-layout">
+    <div class="contact-info">
+      <p class="label">Project details</p>
+      <h2 class="display-xs" style="margin:14px 0 20px">Good work deserves
+        <em>a good front door.</em></h2>
+      <p class="body-copy measure">Starter projects begin around $300 CAD. Final quotes depend on
+        scope, pages, content, integrations, and revisions.</p>
+      <dl class="metalist" style="margin-top:32px">
+        <div><dt>Location</dt><dd>Kitchener, Ontario</dd></div>
+        <div><dt>Projects</dt><dd>Local + remote</dd></div>
+        <div><dt>Email</dt><dd>hello@krdwebsmith.com</dd></div>
+        <div><dt>Reply</dt><dd>By email</dd></div>
+      </dl>
+    </div>
+
+    <form id="contactForm" class="contact-form" novalidate>
+      <div class="progress" aria-hidden="true"><i id="progressFill"></i></div>
+      <p class="progress-meta"><span>Inquiry / 001</span><span id="progressCount">0 / 5 required</span></p>
+
+      <div class="form-grid">
+        <label><span>Name</span>
+          <input name="name" required autocomplete="name" autocapitalize="words">
+          <div class="field-error"></div></label>
+        <label><span>Business</span>
+          <input name="business" required autocomplete="organization">
+          <div class="field-error"></div></label>
+        <label><span>Email</span>
+          <input name="email" type="email" required autocomplete="email"
+                 inputmode="email" autocapitalize="off" spellcheck="false">
+          <div class="field-error"></div></label>
+        <label><span>Current website</span>
+          <input name="website" type="url" placeholder="https://" inputmode="url"
+                 autocapitalize="off" spellcheck="false">
+          <div class="field-error"></div></label>
+        <label><span>Project type</span>
+          <select name="type" required>
+            <option value="">Select one</option>
+            <option>New business website</option>
+            <option>Website redesign</option>
+            <option>Landing page</option>
+            <option>Custom build</option>
+          </select>
+          <div class="field-error"></div></label>
+        <label><span>Budget</span>
+          <select name="budget" required>
+            <option value="">Select range</option>
+            <option>$300&ndash;$500</option>
+            <option>$500&ndash;$800</option>
+            <option>$800&ndash;$1,200</option>
+            <option>$1,200+</option>
+          </select>
+          <div class="field-error"></div></label>
+      </div>
+
+      <label><span>What do you need?</span>
+        <textarea name="message" rows="6"
+          placeholder="Tell me about the business, current site, goals, pages, or features."></textarea>
+        <div class="field-error"></div></label>
+
+      <button class="button dark submit" type="submit">Send project request
+        <span aria-hidden="true">&#8599;</span></button>
+      <p class="form-status" id="status" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <section class="next-step shell">
+  <div>
+    <p class="meta">Need more context first?</p>
+    <h3>You can still explore before submitting anything.</h3>
+  </div>
+  <div class="button-row"><a class="button" href="work.html">Work</a><a class="button" href="services.html">Services</a><a class="button" href="process.html">Process</a></div>
+</section>
 </main>
 <footer class="site-footer">
   <div class="shell footer-main">
-    <div>
-      <div class="kicker">KRD WEBSMITH</div>
-      <h2>Make the website<br>earn its place.</h2>
+    <div class="footer-brand">
+      <p class="label">KRD Websmith</p>
+      <h2>KRD<br>Websmith</h2>
+      <p>Web design /<br>Kitchener, Ontario</p>
     </div>
-    <div class="footer-col"><span>Explore</span><a href="work.html">Work</a><a href="services.html">Services</a><a href="process.html">Process</a><a href="audit.html">Website audit</a></div>
-    <div class="footer-col"><span>Contact</span><a href="about.html">About</a><a href="contact.html">Start a project</a><a href="mailto:hello@krdwebsmith.com">hello@krdwebsmith.com</a></div>
+    <div class="footer-col">
+      <span>Explore</span><a href="work.html">Work</a><a href="services.html">Services</a><a href="process.html">Process</a><a href="about.html">About</a><a href="audit.html">Audit</a>
+    </div>
+    <div class="footer-col">
+      <span>Start</span>
+      <a href="contact.html">Start a project</a>
+      <a href="mailto:hello@krdwebsmith.com">hello@krdwebsmith.com</a>
+    </div>
   </div>
-  <div class="footer-bottom"><span>© <span id="year"></span> KRD Websmith</span><span>Kitchener, Ontario / Remote</span></div>
+  <div class="shell footer-tech">
+    <div><span>Edition</span><strong>KRD / Web edition</strong></div>
+    <div><span>Service</span><strong>Design + development</strong></div>
+    <div><span>Location</span><strong>Kitchener / Remote</strong></div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; <span id="year">2026</span> KRD Websmith</span>
+    <span>krdwebsmith.com</span>
+  </div>
 </footer>
-<script src="script.js"></script><script>
-const form=document.getElementById("contactForm"),req=[...form.querySelectorAll("[required]")],all=[...form.querySelectorAll("input,select,textarea")],params=new URLSearchParams(location.search);
+
+<script src="script.js" defer></script>
+<script>
+
+const form=document.getElementById("contactForm"),req=[...form.querySelectorAll("[required]")],all=[...form.querySelectorAll("input,select,textarea")];
+/* Prefill source: the query string when it survives, otherwise the handoff stashed by script.js.
+   Some static hosts 301 "/x.html?q" to "/x" and drop the query, so we keep a same-session fallback. */
+var pfq=location.search.slice(1);
+if(!pfq){try{pfq=sessionStorage.getItem("krd:prefill")||""}catch(e){pfq=""}}
+try{sessionStorage.removeItem("krd:prefill")}catch(e){}
+const params=new URLSearchParams(pfq);
 if(params.get("package")){form.elements.type.value=params.get("package")==="Advanced Build"?"Custom build":params.get("package")==="Growth Website"?"Website redesign":"New business website";form.elements.message.value="Recommended package: "+params.get("package")}
 if(params.get("audit"))form.elements.message.value="Website audit score: "+params.get("audit")+"/100. Main focus: "+(params.get("focus")||"website improvement")+".";
 if(params.get("project"))form.elements.message.value="I am interested in a project with a similar level of design to "+params.get("project")+".";
-function progress(){document.getElementById("progressFill").style.width=Math.round(req.filter(x=>x.value.trim()).length/req.length*100)+"%"}
-all.forEach(x=>x.addEventListener("input",progress));progress();
-function valid(f){const e=f.parentElement.querySelector(".field-error");let m="";if(f.required&&!f.value.trim())m="Required.";if(f.type==="email"&&f.value&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value))m="Use a valid email.";if(f.type==="url"&&f.value&&!/^https?:\/\//i.test(f.value))m="Include https://";if(e)e.textContent=m;return !m}
-form.addEventListener("submit",async ev=>{ev.preventDefault();if(!all.map(valid).every(Boolean)){document.getElementById("status").textContent="Check the highlighted fields.";return}const b=form.querySelector(".submit"),old=b.innerHTML;b.disabled=true;b.textContent="Sending...";try{const r=await fetch("https://krd-websmith-contact.newonb123.workers.dev",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(Object.fromEntries(new FormData(form).entries()))});const data=await r.json();if(!r.ok||!data.success)throw new Error(data.error||"Failed");document.getElementById("status").textContent="Sent successfully. I’ll reply by email.";form.reset();progress()}catch(e){document.getElementById("status").textContent="Could not send. Please try again."}finally{b.disabled=false;b.innerHTML=old}});
-</script></body></html>
+function progress(){const done=req.filter(x=>x.value.trim()).length;document.getElementById("progressFill").style.width=Math.round(done/req.length*100)+"%";document.getElementById("progressCount").textContent=done+" / "+req.length+" required"}
+all.forEach(x=>{x.addEventListener("input",progress);x.addEventListener("change",progress)});progress();
+function valid(f){const e=f.parentElement.querySelector(".field-error");let m="";if(f.required&&!f.value.trim())m="Required.";if(f.type==="email"&&f.value&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value))m="Use a valid email.";if(f.type==="url"&&f.value&&!/^https?:\/\//i.test(f.value))m="Include https://";if(e)e.textContent=m;f.setAttribute("aria-invalid",m?"true":"false");return !m}
+all.forEach(f=>f.addEventListener("blur",()=>valid(f)));
+form.addEventListener("submit",async ev=>{
+  ev.preventDefault();
+  const s=document.getElementById("status");
+  if(!all.map(valid).every(Boolean)){s.className="form-status bad";s.textContent="Check the highlighted fields.";const bad=all.find(f=>f.getAttribute("aria-invalid")==="true");if(bad)bad.focus();return}
+  const b=form.querySelector(".submit"),old=b.innerHTML;
+  b.disabled=true;b.textContent="Sending...";
+  s.className="form-status";s.textContent="";
+  try{
+    const r=await fetch("https://krd-websmith-contact.newonb123.workers.dev",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(Object.fromEntries(new FormData(form).entries()))});
+    const data=await r.json();
+    if(!r.ok||!data.success)throw new Error(data.error||"Failed");
+    s.className="form-status ok";s.textContent="Sent successfully. I\u2019ll reply by email.";
+    form.reset();all.forEach(f=>f.setAttribute("aria-invalid","false"));progress();
+  }catch(e){
+    s.className="form-status bad";s.textContent="Could not send. Please email hello@krdwebsmith.com.";
+  }finally{b.disabled=false;b.innerHTML=old}
+});
+
+</script>
+</body>
+</html>
