@@ -1,98 +1,277 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Services — KRD Websmith</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css"><style>
-.packages{border-top:1px solid var(--ink)}
-.package{
-  padding:34px 0;
-  display:grid;
-  grid-template-columns:90px 1fr 260px;
-  gap:30px;
-  border-bottom:1px solid var(--line);
-}
-.package h2{margin:0;font:500 clamp(38px,5vw,72px)/.9 "Cormorant Garamond",serif}
-.package p{max-width:650px}
-.package ul{padding:0;list-style:none;margin:24px 0 0;max-width:650px}
-.package li{padding:9px 0;border-bottom:1px solid var(--line);font:500 9px "IBM Plex Mono",monospace}
-.package-price{font:600 10px "IBM Plex Mono",monospace;text-transform:uppercase}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Services — KRD Websmith</title>
+  <meta name="description" content="Three clear website packages from KRD Websmith: Business Website from $300 CAD, Growth Website from $500 CAD, and Advanced Build quoted by scope.">
+  <link rel="canonical" href="https://krdwebsmith.com/services.html">
+  <meta name="theme-color" content="#F4F1EA">
+  <meta name="author" content="KRD Websmith">
 
-.recommender{
-  margin-top:110px;
-  padding:50px 0;
-  border-top:1px solid var(--ink);
-  border-bottom:1px solid var(--ink);
-}
-.rec-layout{display:grid;grid-template-columns:.75fr 1.25fr;gap:70px}
-.rec-step{padding:22px 0;border-bottom:1px solid var(--line)}
-.rec-step h3{margin:0 0 14px;font:500 28px "Cormorant Garamond",serif}
-.rec-options{display:flex;gap:8px;flex-wrap:wrap}
-.rec-options button{
-  padding:10px 12px;
-  border:1px solid var(--ink);
-  background:transparent;
-  font:500 8px "IBM Plex Mono",monospace;
-  text-transform:uppercase;
-  cursor:pointer;
-}
-.rec-options button.active{background:var(--ink);color:var(--paper)}
-.rec-result{display:none;margin-top:28px;padding:28px;background:var(--ink);color:var(--paper)}
-.rec-result.show{display:block}
-.rec-result h3{margin:8px 0 10px;font:500 44px "Cormorant Garamond",serif}
-.rec-result p{color:#C3BCB0;max-width:680px}
-@media(max-width:900px){
-  .package{grid-template-columns:50px 1fr}
-  .package>div:last-child{grid-column:2}
-  .rec-layout{grid-template-columns:1fr}
-}
-</style></head><body>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KRD Websmith">
+  <meta property="og:title" content="Services — KRD Websmith">
+  <meta property="og:description" content="Three clear website packages from KRD Websmith: Business Website from $300 CAD, Growth Website from $500 CAD, and Advanced Build quoted by scope.">
+  <meta property="og:url" content="https://krdwebsmith.com/services.html">
+  <meta property="og:locale" content="en_CA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Services — KRD Websmith">
+  <meta name="twitter:description" content="Three clear website packages from KRD Websmith: Business Website from $300 CAD, Growth Website from $500 CAD, and Advanced Build quoted by scope.">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=IBM+Plex+Mono:wght@500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=IBM+Plex+Mono:wght@500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=IBM+Plex+Mono:wght@500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"></noscript>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+
+    .tier{border-top:1px solid var(--rule);padding-block:clamp(40px,5vw,80px);
+      display:grid;grid-template-columns:74px 1fr .95fr;gap:clamp(20px,3vw,48px);align-items:start}
+    .tier:last-of-type{border-bottom:1px solid var(--rule)}
+    .tier h2{font:800 clamp(32px,4.4vw,68px)/.92 var(--sans);letter-spacing:-.05em;text-transform:uppercase}
+    .tier-lede{margin:16px 0 0;color:var(--muted);font-size:15px;line-height:1.78;max-width:46ch}
+    .tier-price{margin-top:22px;display:flex;flex-wrap:wrap;align-items:baseline;gap:14px}
+    .tier-price b{font:800 clamp(22px,2.2vw,30px) var(--sans);letter-spacing:-.03em}
+    .tier-price span{font:600 10px var(--mono);text-transform:uppercase;letter-spacing:.13em;color:var(--blue)}
+    .tier-list{display:grid;gap:0;border-top:1px solid var(--line)}
+    .tier-list span{display:flex;align-items:center;gap:12px;padding:11px 0;
+      border-bottom:1px solid var(--line);font:500 11px var(--mono);
+      text-transform:uppercase;letter-spacing:.09em}
+    .tier-list span::before{content:"";width:6px;height:6px;background:var(--blue);flex:none}
+    .tier-visual{margin-top:22px}
+
+    .rec{border:1px solid var(--rule);background:var(--paper-2);
+      padding:clamp(24px,3.4vw,52px);display:grid;
+      grid-template-columns:.85fr 1.15fr;gap:clamp(28px,4vw,60px);align-items:start}
+    .rec-steps{display:grid;gap:26px}
+    .rec-step h3{font:600 20px var(--serif);letter-spacing:-.02em;text-transform:none;
+      font-weight:600;margin-bottom:12px}
+    .rec-options{display:flex;flex-wrap:wrap;gap:8px}
+    .rec-options button,.choices button{
+      min-height:44px;padding:0 15px;background:transparent;
+      border:1px solid var(--line-2);cursor:pointer;
+      font:600 10px var(--mono);text-transform:uppercase;letter-spacing:.1em;
+      transition:background .25s ease,color .25s ease,border-color .25s ease}
+    .rec-options button:hover,.choices button:hover{border-color:var(--ink)}
+    .rec-options button.active,.choices button.active{
+      background:var(--blue);border-color:var(--blue);color:#fff}
+    .rec-result{margin-top:8px;padding-top:26px;border-top:1px solid var(--line);
+      opacity:.35;transition:opacity .4s ease}
+    .rec-result.show{opacity:1}
+    .rec-result h3{margin:12px 0 10px;font:800 clamp(26px,3vw,40px) var(--sans);
+      letter-spacing:-.04em;text-transform:uppercase}
+    .rec-result p{color:var(--muted);font-size:14px;line-height:1.75;margin-bottom:22px}
+    .rec-result[aria-hidden="true"] .button{pointer-events:none}
+    .rec-result.show .button{pointer-events:auto}
+    @media(max-width:1100px){
+      .tier{grid-template-columns:56px 1fr}
+      .tier-side{grid-column:2}
+      .rec{grid-template-columns:1fr}
+    }
+    @media(max-width:760px){
+      .tier{grid-template-columns:1fr;gap:14px}
+      .tier-side{grid-column:auto}
+      .tier-lede{max-width:none}
+    }
+
+  </style>
+</head>
+<body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header id="siteHeader" class="site-header">
-  <a class="brand" href="index.html" aria-label="KRD Websmith home">
-    <span class="brand-mark">KRD</span>
-    <span class="brand-copy"><strong>KRD WEBSMITH</strong><small>WEB DESIGN / DEVELOPMENT</small></span>
+  <a class="brand" href="index.html" aria-label="KRD Websmith — home">
+    <span class="brand-mark" aria-hidden="true">KRD</span>
+    <span class="brand-copy"><strong>KRD Websmith</strong><small>Web design / development</small></span>
   </a>
-  <nav class="desktop-nav" aria-label="Primary navigation"><a class="" href="work.html">Work</a><a class="active" href="services.html">Services</a><a class="" href="process.html">Process</a><a class="" href="audit.html">Audit</a><a class="" href="about.html">About</a></nav>
+  <nav class="desktop-nav" aria-label="Primary"><a href="work.html">Work</a><a href="services.html" class="active" aria-current="page">Services</a><a href="process.html">Process</a><a href="about.html">About</a><a href="audit.html">Audit</a></nav>
   <div class="header-action">
-    <a class="header-cta" href="contact.html">Start a project <span>↗</span></a>
-    <button id="menuToggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+    <a class="header-cta" href="contact.html">Start a project <span aria-hidden="true">&#8599;</span></a>
+    <button id="menuToggle" class="menu-toggle" type="button" aria-label="Open menu"
+            aria-expanded="false" aria-controls="mobileMenu"><i></i><i></i></button>
   </div>
 </header>
-<div id="mobileMenu" class="mobile-menu">
-  <nav><a href="work.html"><span>Work</span><small>01</small></a><a href="services.html"><span>Services</span><small>02</small></a><a href="process.html"><span>Process</span><small>03</small></a><a href="audit.html"><span>Audit</span><small>04</small></a><a href="about.html"><span>About</span><small>05</small></a><a href="contact.html"><span>Contact</span><small>06</small></a></nav>
-</div>
-<main id="main" class="shell"><div class="breadcrumbs"><a href="index.html">Home</a><span>/</span><span>Services</span></div><section class="page-hero"><div class="page-hero-grid"><div><div class="kicker">Services</div><h1>Buy the<br><em>right thing.</em></h1></div><div class="page-hero-aside"><p class="body-copy">Clear starting points without locking the project into a rigid template. The scope should fit the business.</p><div class="page-actions button-row"><a class="button dark" href="#recommender">Find my package <span>↓</span></a><a class="button" href="contact.html">Start a project <span>↗</span></a></div></div></div></section>
-<section class="section"><div class="packages">
-<div class="package reveal"><span class="kicker">01</span><div><h2>Business Website</h2><p class="body-copy">For a local business that needs a strong professional presence and a clear customer path.</p><ul><li>Custom homepage</li><li>Services content</li><li>Responsive design</li><li>Contact form</li><li>Basic SEO setup</li><li>Two revision rounds</li></ul></div><div class="package-price">From $300 CAD</div></div>
-<div class="package reveal"><span class="kicker">02</span><div><h2>Growth Website</h2><p class="body-copy">For businesses that need more pages, stronger lead generation, and a fuller visual system.</p><ul><li>Multiple pages</li><li>Custom interactions</li><li>Lead-focused structure</li><li>Project / gallery system</li><li>Forms and integrations</li><li>Two revision rounds</li></ul></div><div class="package-price">From $500 CAD</div></div>
-<div class="package reveal"><span class="kicker">03</span><div><h2>Advanced Build</h2><p class="body-copy">For unique features, deeper flows, advanced interactions, or requirements outside a standard business website.</p><ul><li>Custom scope</li><li>Advanced interactions</li><li>Third-party integrations</li><li>Custom forms</li><li>Unique content systems</li></ul></div><div class="package-price">Quoted by scope</div></div>
-</div>
 
-<section class="recommender" id="recommender"><div class="rec-layout"><div><div class="kicker">Package recommender</div><h2 class="display">Tell me the shape.<br><em>I’ll narrow the scope.</em></h2><p class="body-copy">This gives you a starting point. It is not a binding quote.</p></div><div>
-<div class="rec-step" data-key="pages"><h3>How much content?</h3><div class="rec-options"><button data-v="1">1–3 pages</button><button data-v="2">4–7 pages</button><button data-v="4">8+ pages</button></div></div>
-<div class="rec-step" data-key="features"><h3>How custom?</h3><div class="rec-options"><button data-v="1">Standard business site</button><button data-v="3">Custom interactions</button><button data-v="6">Advanced features</button></div></div>
-<div class="rec-step" data-key="goal"><h3>Main goal?</h3><div class="rec-options"><button data-v="1">Look professional</button><button data-v="3">Generate leads</button><button data-v="5">Build something unique</button></div></div>
-<div class="rec-result" id="recResult"><div class="kicker">Recommended fit</div><h3 id="recTitle"></h3><p id="recText"></p><a class="button light" id="recContact" href="contact.html">Start with this package <span>↗</span></a></div>
-</div></div></section>
+<div id="mobileMenu" class="mobile-menu">
+  <nav aria-label="Mobile"><a href="work.html"><span>Work</span><small>01</small></a><a href="services.html" aria-current="page"><span>Services</span><small>02</small></a><a href="process.html"><span>Process</span><small>03</small></a><a href="about.html"><span>About</span><small>04</small></a><a href="audit.html"><span>Audit</span><small>05</small></a><a href="contact.html"><span>Contact</span><small>06</small></a></nav>
+  <div class="mobile-menu-foot">
+    <span>KRD / Web studio</span>
+    <span>Kitchener / Ontario</span>
+    <span>hello@krdwebsmith.com</span>
+  </div>
+</div>
+<main id="main">
+  <nav class="breadcrumbs shell" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Services</span></nav>
+  <section class="page-hero shell">
+    <div class="page-hero-grid">
+      <div>
+        <p class="label">Services / Scope</p>
+        <h1 class="display">Buy the<br><em>right thing.</em></h1>
+      </div>
+      <div class="page-hero-aside">
+        <p class="body-copy">Clear starting points without locking the project into a rigid template.
+          The scope should fit the business.</p>
+        <div class="page-actions button-row">
+          <a class="button" href="#recommender">Find my package <span aria-hidden="true">&#8595;</span></a>
+          <a class="button dark" href="contact.html">Start a project <span aria-hidden="true">&#8599;</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="shell section tight">
+    <section class="tier">
+  <span class="num">01</span>
+  <div>
+    <h2>Business Website</h2>
+    <p class="tier-lede">For service businesses that need a professional site, clear service pages, responsive design, and a real inquiry path.</p>
+    <div class="tier-price">
+      <b>From $300 CAD</b><span>3–5 pages</span>
+    </div>
+    <div class="button-row" style="margin-top:24px">
+      <a class="button dark" href="contact.html?package=Business%20Website">Start with this <span aria-hidden="true">&#8599;</span></a>
+    </div>
+  </div>
+  <div class="tier-side">
+    <div class="tier-list"><span>Custom homepage</span><span>Services content</span><span>Responsive design</span><span>Contact form</span><span>Basic SEO setup</span><span>Two revision rounds</span></div>
+    <div class="tier-visual">
+      <div class="frame" style="aspect-ratio:16/10"><img class="" src="assets/shots/noir-detail.webp" alt="Service and price list from the NOIR HOUSE concept" width="538" height="856" loading="lazy" decoding="async"></div>
+      <p class="shot-caption"><span>Example / concept work</span><b>Detail</b></p>
+    </div>
+  </div>
+</section><section class="tier">
+  <span class="num">02</span>
+  <div>
+    <h2>Growth Website</h2>
+    <p class="tier-lede">For businesses that need more content depth, stronger conversion architecture, project galleries, and custom interactions.</p>
+    <div class="tier-price">
+      <b>From $500 CAD</b><span>6–10 pages</span>
+    </div>
+    <div class="button-row" style="margin-top:24px">
+      <a class="button dark" href="contact.html?package=Growth%20Website">Start with this <span aria-hidden="true">&#8599;</span></a>
+    </div>
+  </div>
+  <div class="tier-side">
+    <div class="tier-list"><span>Multiple pages</span><span>Custom interactions</span><span>Lead-focused structure</span><span>Project / gallery system</span><span>Forms and integrations</span><span>Two revision rounds</span></div>
+    <div class="tier-visual">
+      <div class="frame" style="aspect-ratio:16/10"><img class="" src="assets/shots/apex-detail.webp" alt="Package comparison table from the APEX Auto Detailing concept" width="1176" height="626" loading="lazy" decoding="async"></div>
+      <p class="shot-caption"><span>Example / concept work</span><b>Detail</b></p>
+    </div>
+  </div>
+</section><section class="tier">
+  <span class="num">03</span>
+  <div>
+    <h2>Advanced Build</h2>
+    <p class="tier-lede">For deeper systems, integrations, custom workflows, or requirements that go beyond a standard brochure website.</p>
+    <div class="tier-price">
+      <b>Quoted by scope</b><span>Defined together</span>
+    </div>
+    <div class="button-row" style="margin-top:24px">
+      <a class="button dark" href="contact.html?package=Advanced%20Build">Start with this <span aria-hidden="true">&#8599;</span></a>
+    </div>
+  </div>
+  <div class="tier-side">
+    <div class="tier-list"><span>Custom scope</span><span>Advanced interactions</span><span>Third-party integrations</span><span>Custom forms</span><span>Unique content systems</span></div>
+    <div class="tier-visual">
+      <div class="frame" style="aspect-ratio:16/10"><img class="" src="assets/shots/evercrest-detail.webp" alt="Multi-step estimate form from the EVERCREST Outdoor concept" width="597" height="1161" loading="lazy" decoding="async"></div>
+      <p class="shot-caption"><span>Example / concept work</span><b>Detail</b></p>
+    </div>
+  </div>
 </section>
-<section class="next-step"><div><div class="meta">Next step</div><h3>Know what you need now?</h3></div><div class="button-row"><a class="button" href="work.html">See examples</a><a class="button" href="process.html">See process</a><a class="button dark" href="contact.html">Start a project ↗</a></div></section>
+  </div>
+
+  <section class="section shell" id="recommender">
+    <div class="section-index">
+      <b>Tool</b><span class="spacer" aria-hidden="true"></span><span>Package recommender / 003 questions</span>
+    </div>
+    <div class="section-head">
+      <h2 class="display-sm">Tell me the shape.<br><em>I&rsquo;ll narrow the scope.</em></h2>
+      <p class="body-copy section-note">This gives you a starting point. It is not a binding quote.</p>
+    </div>
+
+    <div class="rec">
+      <div class="rec-steps">
+        <div class="rec-step" data-key="pages">
+          <h3>How much content?</h3>
+          <div class="rec-options">
+            <button type="button" data-v="1" aria-pressed="false">1&ndash;3 pages</button>
+            <button type="button" data-v="2" aria-pressed="false">4&ndash;7 pages</button>
+            <button type="button" data-v="4" aria-pressed="false">8+ pages</button>
+          </div>
+        </div>
+        <div class="rec-step" data-key="features">
+          <h3>How custom?</h3>
+          <div class="rec-options">
+            <button type="button" data-v="1" aria-pressed="false">Standard business site</button>
+            <button type="button" data-v="3" aria-pressed="false">Custom interactions</button>
+            <button type="button" data-v="6" aria-pressed="false">Advanced features</button>
+          </div>
+        </div>
+        <div class="rec-step" data-key="goal">
+          <h3>Main goal?</h3>
+          <div class="rec-options">
+            <button type="button" data-v="1" aria-pressed="false">Look professional</button>
+            <button type="button" data-v="3" aria-pressed="false">Generate leads</button>
+            <button type="button" data-v="5" aria-pressed="false">Build something unique</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="rec-result" id="recResult" aria-live="polite" aria-hidden="true">
+        <p class="label">Recommended fit</p>
+        <h3 id="recTitle">Answer the three questions</h3>
+        <p id="recText">A recommendation appears here once all three are selected.</p>
+        <a class="button dark" id="recContact" href="contact.html">Start with this package <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="next-step shell">
+  <div>
+    <p class="meta">Next step</p>
+    <h3>Know what you need now?</h3>
+  </div>
+  <div class="button-row"><a class="button" href="work.html">See examples</a><a class="button" href="process.html">See process</a><a class="button dark" href="contact.html">Start a project <span aria-hidden="true">&#8599;</span></a></div>
+</section>
 </main>
 <footer class="site-footer">
   <div class="shell footer-main">
-    <div>
-      <div class="kicker">KRD WEBSMITH</div>
-      <h2>Make the website<br>earn its place.</h2>
+    <div class="footer-brand">
+      <p class="label">KRD Websmith</p>
+      <h2>KRD<br>Websmith</h2>
+      <p>Web design /<br>Kitchener, Ontario</p>
     </div>
-    <div class="footer-col"><span>Explore</span><a href="work.html">Work</a><a href="services.html">Services</a><a href="process.html">Process</a><a href="audit.html">Website audit</a></div>
-    <div class="footer-col"><span>Contact</span><a href="about.html">About</a><a href="contact.html">Start a project</a><a href="mailto:hello@krdwebsmith.com">hello@krdwebsmith.com</a></div>
+    <div class="footer-col">
+      <span>Explore</span><a href="work.html">Work</a><a href="services.html">Services</a><a href="process.html">Process</a><a href="about.html">About</a><a href="audit.html">Audit</a>
+    </div>
+    <div class="footer-col">
+      <span>Start</span>
+      <a href="contact.html">Start a project</a>
+      <a href="mailto:hello@krdwebsmith.com">hello@krdwebsmith.com</a>
+    </div>
   </div>
-  <div class="footer-bottom"><span>© <span id="year"></span> KRD Websmith</span><span>Kitchener, Ontario / Remote</span></div>
+  <div class="shell footer-tech">
+    <div><span>Edition</span><strong>KRD / Web edition</strong></div>
+    <div><span>Service</span><strong>Design + development</strong></div>
+    <div><span>Location</span><strong>Kitchener / Remote</strong></div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; <span id="year">2026</span> KRD Websmith</span>
+    <span>krdwebsmith.com</span>
+  </div>
 </footer>
-<script src="script.js"></script><script>
+
+<script src="script.js" defer></script>
+<script>
+
 const answers={};
 document.querySelectorAll(".rec-step").forEach(step=>step.querySelectorAll("button").forEach(btn=>btn.addEventListener("click",()=>{
-  step.querySelectorAll("button").forEach(x=>x.classList.remove("active"));
-  btn.classList.add("active");
+  step.querySelectorAll("button").forEach(x=>{x.classList.remove("active");x.setAttribute("aria-pressed","false")});
+  btn.classList.add("active");btn.setAttribute("aria-pressed","true");
   answers[step.dataset.key]=Number(btn.dataset.v);
   if(Object.keys(answers).length===3){
     const score=Object.values(answers).reduce((a,b)=>a+b,0);
@@ -103,7 +282,12 @@ document.querySelectorAll(".rec-step").forEach(step=>step.querySelectorAll("butt
     document.getElementById("recTitle").textContent=title;
     document.getElementById("recText").textContent=text;
     document.getElementById("recContact").href="contact.html?package="+encodeURIComponent(title);
-    document.getElementById("recResult").classList.add("show");
+    const box=document.getElementById("recResult");
+    box.classList.add("show");
+    box.setAttribute("aria-hidden","false");
   }
 })));
-</script></body></html>
+
+</script>
+</body>
+</html>

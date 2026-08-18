@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://krdwebsmith.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://krdwebsmith.com/work.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://krdwebsmith.com/services.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://krdwebsmith.com/process.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://krdwebsmith.com/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://krdwebsmith.com/audit.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://krdwebsmith.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://krdwebsmith.com/project-apex.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://krdwebsmith.com/project-noir.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://krdwebsmith.com/project-evercrest.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+</urlset>

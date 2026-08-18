@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evercrest Outdoor — Landscape Design &amp; Build, Kitchener–Waterloo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box}
+  :root{
+    --forest:#16342A;
+    --forest-2:#1E4536;
+    --deep:#0F241D;
+    --stone:#EDE8DE;
+    --stone-2:#E1DACB;
+    --paper:#FBF9F5;
+    --ink:#1B2521;
+    --mut:#5F6B64;
+    --copper:#B4632A;
+    --line:#D5CDBD;
+    --disp:"Bitter",Georgia,serif;
+    --body:"Karla",system-ui,sans-serif;
+  }
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.68;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.08;margin:0;letter-spacing:-.015em}
+  p{margin:0}
+  .wrap{width:100%;max-width:1220px;margin:0 auto;padding:0 36px}
+  .eyebrow{font-family:var(--body);font-weight:700;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--copper)}
+  .eyebrow.pale{color:#9FBFAE}
+
+  /* header */
+  header{position:sticky;top:0;z-index:50;background:var(--forest);color:#EAF0EC;box-shadow:0 1px 0 rgba(255,255,255,.08)}
+  .bar{display:flex;align-items:center;height:80px;gap:40px}
+  .brand{display:flex;align-items:center;gap:12px;margin-right:auto}
+  .brand svg{width:34px;height:34px;color:#EAF0EC;flex:none}
+  .brand .wm b{display:block;font-family:var(--disp);font-weight:700;font-size:21px;letter-spacing:.07em;text-transform:uppercase;line-height:1}
+  .brand .wm i{display:block;font-style:normal;font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:#9FBFAE;margin-top:4px}
+  nav{display:flex;gap:30px}
+  nav a{font-size:14.5px;font-weight:500;color:#CBDCD2}
+  nav a:hover{color:#fff;text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px;text-decoration-color:var(--copper)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--body);font-weight:700;font-size:15px;padding:14px 24px;background:var(--copper);color:#fff;border:2px solid var(--copper);border-radius:2px;cursor:pointer}
+  .btn:hover{background:#9C5322;border-color:#9C5322}
+  .btn.line{background:transparent;border-color:currentColor;color:inherit}
+  .btn.line:hover{background:rgba(255,255,255,.1)}
+  .btn.dark{background:var(--forest);border-color:var(--forest)}
+  .btn.dark:hover{background:var(--forest-2);border-color:var(--forest-2)}
+  .burger{display:none;width:42px;height:42px;border:1px solid rgba(255,255,255,.3);background:transparent;padding:0;align-items:center;justify-content:center;border-radius:2px}
+  .burger i{display:block;width:18px;height:2px;background:#EAF0EC;box-shadow:0 -6px 0 #EAF0EC,0 6px 0 #EAF0EC}
+  .topline{background:var(--deep);color:#A9C6B6;font-size:13px;padding:9px 0}
+  .topline .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .topline b{color:#fff;font-weight:600}
+
+  /* hero */
+  .hero{position:relative;color:#fff;min-height:786px;display:flex;align-items:center;overflow:hidden}
+  .hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hero .veil{position:absolute;inset:0;background:linear-gradient(100deg,rgba(12,32,25,.95) 0%,rgba(12,32,25,.86) 46%,rgba(12,32,25,.5) 100%)}
+  .hero .wrap{position:relative;padding:96px 36px}
+  .hero h1{font-size:clamp(40px,5.6vw,72px);max-width:20ch}
+  .hero p.lede{font-size:19.5px;color:#DCE7E0;max-width:48ch;margin-top:24px}
+  .hero .acts{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+  .badges{display:flex;flex-wrap:wrap;gap:12px;margin-top:44px}
+  .badges span{font-size:12.5px;font-weight:600;letter-spacing:.04em;padding:9px 15px;border:1px solid rgba(255,255,255,.3);border-radius:2px;color:#D9E6DF}
+
+  section{padding:100px 0}
+  .sechead{max-width:64ch}
+  .sechead h2{font-size:clamp(32px,4.2vw,52px);margin-top:14px}
+  .sechead p{color:var(--mut);margin-top:18px;font-size:18px}
+
+  /* services grid */
+  .svc{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:52px}
+  .svc article{background:var(--stone);border-top:4px solid var(--forest);padding:0;overflow:hidden}
+  .svc article img{width:100%;aspect-ratio:16/10;object-fit:cover}
+  .svc .body{padding:26px 26px 30px}
+  .svc h3{font-size:23px}
+  .svc .season{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--copper);margin-bottom:10px}
+  .svc p{color:var(--mut);font-size:15.5px;margin-top:10px}
+  .svc ul{margin:16px 0 0;padding:0;list-style:none;font-size:14.5px}
+  .svc li{padding:8px 0 8px 22px;border-top:1px solid var(--line);position:relative;color:#3B4741}
+  .svc li::before{content:"";position:absolute;left:2px;top:15px;width:9px;height:9px;border:2px solid var(--copper);border-radius:50%}
+  .svc .from{margin-top:18px;font-family:var(--disp);font-weight:600;font-size:17px;color:var(--forest)}
+
+  /* work / projects */
+  .work{background:var(--forest);color:#EAF0EC}
+  .work h2{color:#fff}
+  .work .sechead p{color:#B6CCC0}
+  .proj{display:grid;grid-template-columns:1.35fr 1fr;gap:24px;margin-top:52px}
+  .proj figure{margin:0;position:relative;overflow:hidden}
+  .proj img{width:100%;height:100%;object-fit:cover}
+  .proj .tall img{aspect-ratio:4/5}
+  .proj .wide img{aspect-ratio:16/11}
+  .proj .col{display:grid;gap:24px}
+  .proj figcaption{padding:16px 0 0}
+  .proj figcaption b{display:block;font-family:var(--disp);font-weight:600;font-size:19px;color:#fff}
+  .proj figcaption span{font-size:13.5px;color:#A9C6B6}
+
+  /* estimate form */
+  .est{background:var(--stone-2)}
+  .est .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+  .est h2{font-size:clamp(32px,4vw,48px);margin-top:14px}
+  .est .why{margin:30px 0 0;padding:0;list-style:none}
+  .est .why li{display:flex;gap:14px;padding:16px 0;border-top:1px solid var(--line);font-size:16px;color:#3B4741}
+  .est .why svg{width:20px;height:20px;color:var(--forest);flex:none;margin-top:4px}
+  .form{background:var(--paper);border:1px solid var(--line);border-radius:3px;box-shadow:0 1px 0 rgba(0,0,0,.03)}
+  .steps{display:flex;border-bottom:1px solid var(--line)}
+  .steps div{flex:1;padding:16px 12px;text-align:center;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9AA49E;border-right:1px solid var(--line);position:relative}
+  .steps div:last-child{border-right:0}
+  .steps div.on{color:var(--forest);background:#fff}
+  .steps div.on::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--copper)}
+  .steps div b{display:block;font-family:var(--disp);font-size:18px;letter-spacing:0;text-transform:none;margin-bottom:2px}
+  .fbody{padding:34px 32px 32px}
+  .fbody h3{font-size:24px}
+  .fbody .q{font-size:14.5px;color:var(--mut);margin:8px 0 26px}
+  fieldset{border:0;padding:0;margin:0 0 26px}
+  legend{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin-bottom:12px;padding:0}
+  .opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .opt{display:flex;align-items:center;gap:11px;border:1px solid var(--line);border-radius:2px;padding:14px 15px;font-size:15px;background:#fff;cursor:pointer}
+  .opt i{width:16px;height:16px;border:2px solid #B9C2BB;border-radius:50%;flex:none;display:block}
+  .opt.on{border-color:var(--forest);box-shadow:inset 0 0 0 1px var(--forest)}
+  .opt.on i{border-color:var(--forest);background:radial-gradient(circle,var(--forest) 0 4px,#fff 5px)}
+  .pills{display:flex;flex-wrap:wrap;gap:9px}
+  .pill{font-size:14.5px;font-weight:500;padding:11px 16px;border:1px solid var(--line);border-radius:2px;background:#fff;color:#3B4741;font-family:var(--body);cursor:pointer}
+  .pill.on{background:var(--forest);border-color:var(--forest);color:#fff}
+  label{display:block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+  input,select,textarea{width:100%;border:1px solid var(--line);background:#fff;border-radius:2px;padding:13px 14px;font-family:var(--body);font-size:16px;color:var(--ink)}
+  input:focus,select:focus,textarea:focus{outline:0;border-color:var(--forest);box-shadow:0 0 0 3px rgba(22,52,42,.12)}
+  .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .full{grid-column:1/-1}
+  .factions{display:flex;align-items:center;gap:16px;margin-top:26px;flex-wrap:wrap}
+  .factions .btn{padding:15px 26px}
+  .factions small{font-size:13.5px;color:var(--mut)}
+
+  /* trust */
+  .trust .grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+  .trust figure{margin:0}
+  .trust figure img{width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:2px}
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:36px;border-top:1px solid var(--line)}
+  .facts div{padding:22px 20px 22px 0;border-bottom:1px solid var(--line)}
+  .facts b{display:block;font-family:var(--disp);font-weight:700;font-size:34px;color:var(--forest);line-height:1}
+  .facts span{font-size:14px;color:var(--mut)}
+  blockquote{margin:34px 0 0;padding:24px 26px;background:var(--stone);border-left:4px solid var(--copper)}
+  blockquote p{font-family:var(--disp);font-weight:500;font-size:19px;line-height:1.5}
+  blockquote cite{display:block;font-family:var(--body);font-style:normal;font-size:13.5px;color:var(--mut);margin-top:12px}
+
+  /* area */
+  .area{background:var(--stone)}
+  .area .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:14px 24px;margin-top:36px;list-style:none;padding:0}
+  .area .cols li{padding:12px 0;border-top:1px solid var(--line);font-size:16px;font-weight:500}
+  .area .cols li span{display:block;font-size:13px;color:var(--mut);font-weight:400}
+
+  footer{background:var(--deep);color:#A9C6B6;padding:72px 0 30px}
+  .fgrid2{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px}
+  footer h5{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#fff;margin:0 0 16px}
+  footer ul{list-style:none;margin:0;padding:0;font-size:15px}
+  footer li{margin-bottom:10px}
+  footer a:hover{color:#fff}
+  .fbot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-top:52px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);font-size:13px}
+
+  @media(max-width:1024px){
+    .svc{grid-template-columns:1fr 1fr}
+    .proj,.est .grid,.trust .grid{grid-template-columns:1fr;gap:44px}
+    .area .cols{grid-template-columns:1fr 1fr}
+    .fgrid2{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:760px){
+    body{font-size:16px}
+    .wrap{padding:0 20px}
+    nav,.bar .btn{display:none}
+    .burger{display:flex}
+    .bar{height:66px}
+    .topline .wrap{justify-content:flex-start;font-size:12px}
+    .topline span.hidem{display:none}
+    section{padding:62px 0}
+    .hero{min-height:0}
+    .hero .wrap{padding:64px 20px 56px}
+    .hero .veil{background:linear-gradient(0deg,rgba(12,32,25,.96) 25%,rgba(12,32,25,.6) 100%)}
+    .hero h1{font-size:38px;max-width:none}
+    .hero p.lede{font-size:17px}
+    .hero .acts .btn{flex:1 1 100%}
+    .svc{grid-template-columns:1fr;gap:20px}
+    .proj{gap:18px}
+    .fbody{padding:24px 20px}
+    .opts{grid-template-columns:1fr}
+    .fgrid{grid-template-columns:1fr}
+    .steps div{padding:11px 6px;font-size:10px;letter-spacing:.06em}
+    .steps div b{font-size:15px}
+    .facts{grid-template-columns:1fr}
+    .area .cols{grid-template-columns:1fr}
+    .fgrid2{grid-template-columns:1fr;gap:32px}
+    .factions{flex-direction:column;align-items:stretch}
+    .factions .btn{width:100%}
+  }
+</style>
+</head>
+<body id="top">
+
+<div class="topline">
+  <div class="wrap">
+    <span><b>(519) 555-0173</b> — free on-site consultation</span>
+    <span class="hidem">Serving Waterloo Region &amp; Wellington County · WSIB cleared · $5M liability</span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 34 34" fill="none" aria-label="Evercrest Outdoor logo"><path d="M17 2 30 31H4L17 2Z" stroke="currentColor" stroke-width="1.6"/><path d="M17 11.5 24 26H10l7-14.5Z" fill="currentColor"/><path d="M2 31h30" stroke="currentColor" stroke-width="1.6"/></svg>
+      <span class="wm"><b>Evercrest</b><i>Outdoor · Est. 2004</i></span>
+    </a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#work">Projects</a>
+      <a href="#estimate">Get an estimate</a>
+      <a href="#about">About us</a>
+      <a href="#area">Service area</a>
+    </nav>
+    <a class="btn" href="#estimate">Get an estimate</a>
+    <button class="burger" aria-label="Menu"><i></i></button>
+  </div>
+</header>
+
+<div class="hero">
+  <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=2000&amp;q=80&amp;auto=format&amp;fit=crop" alt="Modern home with a designed lawn and planting beds">
+  <div class="veil"></div>
+  <div class="wrap">
+    <p class="eyebrow pale">Landscape design &amp; build — Waterloo Region</p>
+    <h1>Yards built to outlast the mortgage.</h1>
+    <p class="lede">Twenty-two years of stonework, grading and planting across Kitchener, Waterloo and Guelph. One crew, one project at a time, and a written scope before the first shovel goes in the ground.</p>
+    <div class="acts">
+      <a class="btn" href="#estimate">Get an estimate</a>
+      <a class="btn line" href="#work">See our projects</a>
+    </div>
+    <div class="badges">
+      <span>Landscape Ontario member</span>
+      <span>WSIB cleared</span>
+      <span>$5M liability</span>
+      <span>5-year hardscape warranty</span>
+      <span>Financing available</span>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sechead">
+      <p class="eyebrow">What we build</p>
+      <h2>Design, build, and the maintenance that keeps it right</h2>
+      <p>We take on roughly thirty projects a season. Everything below is done by our own crew — the only trades we bring in are licensed electrical and gas.</p>
+    </div>
+    <div class="svc">
+      <article>
+        <img src="https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=900&amp;q=80&amp;auto=format&amp;fit=crop" alt="Planting perennials by hand">
+        <div class="body">
+          <div class="season">Spring · April – June</div>
+          <h3>Landscape design &amp; planting</h3>
+          <p>Scaled plans, plant lists sourced from Ontario growers, and beds built on real soil rather than bagged topsoil.</p>
+          <ul><li>Full-property or single-bed plans</li><li>Native and pollinator planting</li><li>Two-year plant replacement</li></ul>
+          <div class="from">Design from $1,800 · credited to build</div>
+        </div>
+      </article>
+      <article>
+        <img src="https://images.unsplash.com/photo-1592595896551-12b371d546d5?w=900&amp;q=80&amp;auto=format&amp;fit=crop" alt="Limestone walkway beside a new lawn">
+        <div class="body">
+          <div class="season">All season</div>
+          <h3>Patios, walls &amp; walkways</h3>
+          <p>Compacted base to 8 inches, polymeric joints, and retaining walls engineered above four feet.</p>
+          <ul><li>Natural stone &amp; Unilock pavers</li><li>Steps, pillars, seat walls</li><li>5-year settlement warranty</li></ul>
+          <div class="from">Typical patio $14,000 – $38,000</div>
+        </div>
+      </article>
+      <article>
+        <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=900&amp;q=80&amp;auto=format&amp;fit=crop" alt="Freshly laid sod lawn">
+        <div class="body">
+          <div class="season">Summer</div>
+          <h3>Grading, drainage &amp; sod</h3>
+          <p>Wet basements and standing water fixed properly — surveyed slopes, swales, and weeping tile where it's needed.</p>
+          <ul><li>Laser-graded lot work</li><li>Window well &amp; downspout drainage</li><li>Kentucky bluegrass sod or seed</li></ul>
+          <div class="from">From $4,200</div>
+        </div>
+      </article>
+      <article>
+        <img src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?w=900&amp;q=80&amp;auto=format&amp;fit=crop" alt="Raised garden beds">
+        <div class="body">
+          <div class="season">Spring &amp; fall</div>
+          <h3>Kitchen gardens &amp; raised beds</h3>
+          <p>Cedar beds, irrigation on a timer, and a planting plan for a zone 5b growing season.</p>
+          <ul><li>Cedar or corten steel</li><li>Drip irrigation installed</li><li>Soil blend built on site</li></ul>
+          <div class="from">From $2,600</div>
+        </div>
+      </article>
+      <article>
+        <img src="https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=900&amp;q=80&amp;auto=format&amp;fit=crop" alt="Mature trees on a wooded property">
+        <div class="body">
+          <div class="season">Fall · Sept – Nov</div>
+          <h3>Tree &amp; shrub care</h3>
+          <p>Structural pruning by an ISA-certified arborist, plus removals with a crane when the yard is tight.</p>
+          <ul><li>Certified arborist reports</li><li>Stump grinding &amp; chip removal</li><li>Deep-root fertilising</li></ul>
+          <div class="from">Assessments $250</div>
+        </div>
+      </article>
+      <article>
+        <img src="https://images.unsplash.com/photo-1483664852095-d6cc6870702d?w=900&amp;q=80&amp;auto=format&amp;fit=crop" alt="Snow-covered property at sunrise">
+        <div class="body">
+          <div class="season">Winter · Dec – March</div>
+          <h3>Snow &amp; property care</h3>
+          <p>Seasonal contracts for residential driveways and small commercial lots, with 5cm trigger service.</p>
+          <ul><li>Salting &amp; walkway clearing</li><li>GPS-logged visits</li><li>Seasonal or per-visit</li></ul>
+          <div class="from">Seasonal from $690</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="sechead">
+      <p class="eyebrow pale">Recent projects</p>
+      <h2>Built in the last two seasons</h2>
+      <p>Every project below was designed, excavated and planted by the same crew that shows up on day one.</p>
+    </div>
+    <div class="proj">
+      <figure class="wide">
+        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1400&amp;q=80&amp;auto=format&amp;fit=crop" alt="Flagstone path through a rebuilt rear garden">
+        <figcaption><b>Beechwood — full rear yard rebuild</b><span>Waterloo · 2,400 sq ft flagstone terrace, raised planters, 6-week build · $112,000</span></figcaption>
+      </figure>
+      <div class="col">
+        <figure class="tall">
+          <img src="https://images.unsplash.com/photo-1598228723793-52759bba239c?w=900&amp;q=80&amp;auto=format&amp;fit=crop" alt="Front garden and lawn at a brick home">
+          <figcaption><b>Belmont Village front garden</b><span>Kitchener · Perennial redesign &amp; limestone walk · $26,400</span></figcaption>
+        </figure>
+        <figure class="tall">
+          <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=900&amp;q=80&amp;auto=format&amp;fit=crop" alt="Interlock driveway and front entry stonework">
+          <figcaption><b>Elora driveway &amp; entry</b><span>Wellington County · Interlock drive, limestone steps, screening cedars · $41,000</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="est" id="estimate">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow">Get an estimate</p>
+      <h2>Four questions, then a real number</h2>
+      <p style="color:var(--mut);margin-top:18px">Tell us the shape of the project and we'll send a ballpark range within two business days, plus the two nearest jobs we've built like it. If it looks right, we book a site visit — no charge, about forty minutes.</p>
+      <ul class="why">
+        <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5 8 14.5 16 6" stroke="currentColor" stroke-width="2"/></svg><div>Fixed-price contracts. Change orders in writing, signed before work resumes.</div></li>
+        <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5 8 14.5 16 6" stroke="currentColor" stroke-width="2"/></svg><div>Deposits held to 15%. Progress draws tied to completed stages.</div></li>
+        <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5 8 14.5 16 6" stroke="currentColor" stroke-width="2"/></svg><div>We tell you when a project should wait for next season — and why.</div></li>
+      </ul>
+    </div>
+
+    <div class="form">
+      <div class="steps">
+        <div class="on"><b>1</b>Project</div>
+        <div><b>2</b>Property</div>
+        <div><b>3</b>Budget</div>
+        <div><b>4</b>Contact</div>
+      </div>
+      <div class="fbody">
+        <h3>What are you looking to have built?</h3>
+        <p class="q">Pick the closest match — we'll sort out the details on site.</p>
+        <form onsubmit="return false">
+          <fieldset>
+            <legend>Project type</legend>
+            <div class="opts">
+              <span class="opt on"><i></i>Patio, walls or walkway</span>
+              <span class="opt"><i></i>Full backyard redesign</span>
+              <span class="opt"><i></i>Grading &amp; drainage repair</span>
+              <span class="opt"><i></i>Planting &amp; garden beds</span>
+              <span class="opt"><i></i>New sod or lawn repair</span>
+              <span class="opt"><i></i>Not sure yet</span>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Property size</legend>
+            <div class="pills">
+              <button class="pill">Townhouse lot</button>
+              <button class="pill on">Under ¼ acre</button>
+              <button class="pill">¼ – ½ acre</button>
+              <button class="pill">½ – 1 acre</button>
+              <button class="pill">Rural / over 1 acre</button>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Budget range you're working with</legend>
+            <div class="pills">
+              <button class="pill">$5k – $15k</button>
+              <button class="pill on">$15k – $40k</button>
+              <button class="pill">$40k – $80k</button>
+              <button class="pill">$80k+</button>
+              <button class="pill">Need guidance</button>
+            </div>
+          </fieldset>
+          <div class="fgrid">
+            <div><label for="nm">Name</label><input id="nm" placeholder="Karen Whitfield"></div>
+            <div><label for="ph">Phone</label><input id="ph" placeholder="(519) 000-0000"></div>
+            <div class="full"><label for="ad">Property address</label><input id="ad" placeholder="88 Beechwood Cres, Waterloo"></div>
+            <div class="full"><label for="tm">Ideal start</label>
+              <select id="tm"><option>This season — before October</option><option>Fall 2026</option><option>Spring 2027</option><option>Flexible, whatever books first</option></select>
+            </div>
+          </div>
+          <div class="factions">
+            <button class="btn">Continue to step 2</button>
+            <small>Takes about 90 seconds. No sales calls — we email first.</small>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust" id="about">
+  <div class="wrap grid">
+    <figure><img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Soil worked by hand before planting"></figure>
+    <div>
+      <p class="eyebrow">Why homeowners hire us twice</p>
+      <h2 style="font-size:clamp(30px,3.8vw,46px)">Started with one truck in Baden. Still the same crew leads.</h2>
+      <p style="color:var(--mut);margin-top:20px">Dan Voss laid his first patio in 2004 while finishing an apprenticeship in masonry. Evercrest is now eleven people, two excavators, and a shop off Erb Street — but we still cap the season at thirty builds so no one gets handed off to a subcontractor halfway through.</p>
+      <div class="facts">
+        <div><b>22 yrs</b><span>Building in Waterloo Region</span></div>
+        <div><b>640+</b><span>Completed properties</span></div>
+        <div><b>11</b><span>Full-time staff, no subs</span></div>
+        <div><b>5 yr</b><span>Hardscape warranty</span></div>
+      </div>
+      <blockquote>
+        <p>“They rebuilt a slope that three companies told us to just live with. Two winters later, the basement is still dry and the wall hasn't moved a millimetre.”</p>
+        <cite>Marisa &amp; Tom Bergeron — Waterloo, 2024 build</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="area" id="area">
+  <div class="wrap">
+    <div class="sechead">
+      <p class="eyebrow">Service area</p>
+      <h2>Where we work</h2>
+      <p>Within 45 minutes of the shop. Anything further we'll quote, but only for full-property builds.</p>
+    </div>
+    <ul class="cols">
+      <li>Kitchener<span>All neighbourhoods</span></li>
+      <li>Waterloo<span>Incl. Beechwood, Westmount</span></li>
+      <li>Cambridge<span>Incl. Hespeler, Preston</span></li>
+      <li>Guelph<span>Full city</span></li>
+      <li>Elmira &amp; St. Jacobs<span>Woolwich Township</span></li>
+      <li>Baden &amp; New Hamburg<span>Wilmot Township</span></li>
+      <li>Elora &amp; Fergus<span>Centre Wellington</span></li>
+      <li>Stratford<span>Full builds only</span></li>
+    </ul>
+    <div style="margin-top:44px;display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+      <a class="btn dark" href="#estimate">Get an estimate</a>
+      <span style="color:var(--mut);font-size:16px">Or call the shop directly — <strong>(519) 555-0173</strong>, Mon–Fri 7:00–17:00.</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid2">
+      <div>
+        <a class="brand" href="#top" style="margin-bottom:18px">
+          <svg viewBox="0 0 34 34" fill="none" aria-hidden="true"><path d="M17 2 30 31H4L17 2Z" stroke="currentColor" stroke-width="1.6"/><path d="M17 11.5 24 26H10l7-14.5Z" fill="currentColor"/><path d="M2 31h30" stroke="currentColor" stroke-width="1.6"/></svg>
+          <span class="wm"><b>Evercrest</b><i>Outdoor · Est. 2004</i></span>
+        </a>
+        <p style="max-width:34ch;font-size:15px">Landscape design, hardscape construction and property care across Waterloo Region and Wellington County.</p>
+      </div>
+      <div><h5>Services</h5><ul><li><a href="#services">Design &amp; planting</a></li><li><a href="#services">Patios &amp; walls</a></li><li><a href="#services">Grading &amp; drainage</a></li><li><a href="#services">Snow &amp; property care</a></li></ul></div>
+      <div><h5>Company</h5><ul><li><a href="#about">About Evercrest</a></li><li><a href="#work">Projects</a></li><li><a href="#area">Service area</a></li><li>Careers — 2 openings</li></ul></div>
+      <div><h5>Shop</h5><ul><li>412 Erb Street West<br>Waterloo, ON N2L 1W6</li><li>(519) 555-0173</li><li>build@evercrestoutdoor.ca</li><li>Mon–Fri 7:00–17:00</li></ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 Evercrest Outdoor Ltd. — Concept site</span>
+      <span>Landscape Ontario member · WSIB cleared · $5M liability</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+# Files kept in the repo but NOT served publicly.
+# wrangler.jsonc serves "./", so without this the generator source,
+# internal notes, and the concept prototypes would all be fetchable.
+# Cloudflare Workers static assets reads this file (gitignore syntax).
+# Nothing referenced by the 10 published pages is listed here.
+
+.assetsignore
+README.md
+tools/
+docs/
+concepts/

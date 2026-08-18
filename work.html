@@ -1,62 +1,202 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Work — KRD Websmith</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css"><style>
-.work-stack{display:grid;gap:22px}
-.work-item{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  min-height:560px;
-  border-top:1px solid var(--ink);
-  border-bottom:1px solid var(--ink);
-}
-.work-item:nth-child(even){grid-template-columns:.9fr 1.1fr}
-.work-item:nth-child(even) .work-photo{order:2}
-.work-photo{min-height:560px}
-.work-copy{padding:50px;display:flex;flex-direction:column}
-.work-copy h2{margin:auto 0 18px;font:500 clamp(48px,5.5vw,84px)/.88 "Cormorant Garamond",serif;letter-spacing:-.055em}
-.work-copy p{max-width:560px}
-.work-copy .button-row{margin-top:24px}
-@media(max-width:900px){
-  .work-item,.work-item:nth-child(even){grid-template-columns:1fr}
-  .work-item:nth-child(even) .work-photo{order:0}
-  .work-photo{min-height:480px}
-  .work-copy{padding:34px 0 10px}
-}
-</style></head><body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Work — KRD Websmith</title>
+  <meta name="description" content="Concept website projects by KRD Websmith: APEX Auto Detailing, NOIR HOUSE and EVERCREST Outdoor. Real working builds shown at desktop and mobile.">
+  <link rel="canonical" href="https://krdwebsmith.com/work.html">
+  <meta name="theme-color" content="#F4F1EA">
+  <meta name="author" content="KRD Websmith">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KRD Websmith">
+  <meta property="og:title" content="Work — KRD Websmith">
+  <meta property="og:description" content="Concept website projects by KRD Websmith: APEX Auto Detailing, NOIR HOUSE and EVERCREST Outdoor. Real working builds shown at desktop and mobile.">
+  <meta property="og:url" content="https://krdwebsmith.com/work.html">
+  <meta property="og:locale" content="en_CA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Work — KRD Websmith">
+  <meta name="twitter:description" content="Concept website projects by KRD Websmith: APEX Auto Detailing, NOIR HOUSE and EVERCREST Outdoor. Real working builds shown at desktop and mobile.">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=IBM+Plex+Mono:wght@500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=IBM+Plex+Mono:wght@500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=IBM+Plex+Mono:wght@500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"></noscript>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header id="siteHeader" class="site-header">
-  <a class="brand" href="index.html" aria-label="KRD Websmith home">
-    <span class="brand-mark">KRD</span>
-    <span class="brand-copy"><strong>KRD WEBSMITH</strong><small>WEB DESIGN / DEVELOPMENT</small></span>
+  <a class="brand" href="index.html" aria-label="KRD Websmith — home">
+    <span class="brand-mark" aria-hidden="true">KRD</span>
+    <span class="brand-copy"><strong>KRD Websmith</strong><small>Web design / development</small></span>
   </a>
-  <nav class="desktop-nav" aria-label="Primary navigation"><a class="active" href="work.html">Work</a><a class="" href="services.html">Services</a><a class="" href="process.html">Process</a><a class="" href="audit.html">Audit</a><a class="" href="about.html">About</a></nav>
+  <nav class="desktop-nav" aria-label="Primary"><a href="work.html" class="active" aria-current="page">Work</a><a href="services.html">Services</a><a href="process.html">Process</a><a href="about.html">About</a><a href="audit.html">Audit</a></nav>
   <div class="header-action">
-    <a class="header-cta" href="contact.html">Start a project <span>↗</span></a>
-    <button id="menuToggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+    <a class="header-cta" href="contact.html">Start a project <span aria-hidden="true">&#8599;</span></a>
+    <button id="menuToggle" class="menu-toggle" type="button" aria-label="Open menu"
+            aria-expanded="false" aria-controls="mobileMenu"><i></i><i></i></button>
   </div>
 </header>
+
 <div id="mobileMenu" class="mobile-menu">
-  <nav><a href="work.html"><span>Work</span><small>01</small></a><a href="services.html"><span>Services</span><small>02</small></a><a href="process.html"><span>Process</span><small>03</small></a><a href="audit.html"><span>Audit</span><small>04</small></a><a href="about.html"><span>About</span><small>05</small></a><a href="contact.html"><span>Contact</span><small>06</small></a></nav>
+  <nav aria-label="Mobile"><a href="work.html" aria-current="page"><span>Work</span><small>01</small></a><a href="services.html"><span>Services</span><small>02</small></a><a href="process.html"><span>Process</span><small>03</small></a><a href="about.html"><span>About</span><small>04</small></a><a href="audit.html"><span>Audit</span><small>05</small></a><a href="contact.html"><span>Contact</span><small>06</small></a></nav>
+  <div class="mobile-menu-foot">
+    <span>KRD / Web studio</span>
+    <span>Kitchener / Ontario</span>
+    <span>hello@krdwebsmith.com</span>
+  </div>
 </div>
-<main id="main" class="shell"><div class="breadcrumbs"><a href="index.html">Home</a><span>/</span><span>Work</span></div><section class="page-hero"><div class="page-hero-grid"><div><div class="kicker">Selected work</div><h1>Built to fit<br><em>the business.</em></h1></div><div class="page-hero-aside"><p class="body-copy">Each project changes because the customer, offer, tone, and conversion goal change. These are concept studies built to demonstrate range.</p><div class="page-actions button-row"><a class="button dark" href="contact.html">Start a project <span>↗</span></a><a class="button" href="services.html">View services <span>→</span></a></div></div></div></section>
-<section class="section"><div class="work-stack">
-<article class="work-item reveal"><div class="work-photo image-frame"><img src="https://images.pexels.com/photos/28995187/pexels-photo-28995187.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Apex Auto Detailing"><div class="image-label invert-label">01 / AUTOMOTIVE</div></div><div class="work-copy"><div class="kicker">Performance / premium service</div><h2>APEX Auto Detailing</h2><p class="body-copy">A performance-led concept that makes a local detailing business feel more premium, focused, and easier to book.</p><div class="button-row"><a class="button dark" href="project-apex.html">Open case study <span>↗</span></a></div></div></article>
-<article class="work-item reveal"><div class="work-photo image-frame"><img src="https://images.unsplash.com/photo-1686671805337-7d8aa64b965f?auto=format&fit=crop&w=1800&q=88" alt="Noir House"><div class="image-label invert-label">02 / BARBERING</div></div><div class="work-copy"><div class="kicker">Editorial / booking</div><h2>NOIR HOUSE</h2><p class="body-copy">A quieter, editorial barbershop direction built around taste, service clarity, and a cleaner booking experience.</p><div class="button-row"><a class="button dark" href="project-noir.html">Open case study <span>↗</span></a></div></div></article>
-<article class="work-item reveal"><div class="work-photo image-frame"><img src="https://images.squarespace-cdn.com/content/v1/55304fb5e4b00c29c94de6b3/f5a239d9-2dd5-49bb-8a9d-e895d165b5a9/IMG_1510%2B3.jpg" alt="Evercrest Outdoor"><div class="image-label invert-label">03 / LANDSCAPE</div></div><div class="work-copy"><div class="kicker">High-ticket service / lead qualification</div><h2>EVERCREST Outdoor</h2><p class="body-copy">A landscape construction concept designed to build trust before the first call and attract more serious project inquiries.</p><div class="button-row"><a class="button dark" href="project-evercrest.html">Open case study <span>↗</span></a></div></div></article>
-</div></section>
-<section class="next-step"><div><div class="meta">Next step</div><h3>Seen enough? Find the right package or start the conversation.</h3></div><div class="button-row"><a class="button" href="services.html#recommender">Recommend my package</a><a class="button dark" href="contact.html">Start a project ↗</a></div></section>
+<main id="main">
+  <nav class="breadcrumbs shell" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Work</span></nav>
+  <section class="page-hero shell">
+    <div class="page-hero-grid">
+      <div>
+        <p class="label">Selected work / Archive</p>
+        <h1 class="display">Built to fit<br><em>the business.</em></h1>
+      </div>
+      <div class="page-hero-aside">
+        <p class="body-copy">Each project changes because the customer, offer, tone, and conversion
+          goal change. These are concept studies, built as real working websites to demonstrate range.</p>
+        <div class="page-actions button-row">
+          <a class="button dark" href="contact.html">Start a project <span aria-hidden="true">&#8599;</span></a>
+          <a class="button" href="services.html">View services <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section shell">
+    <div class="section-index">
+      <b>Archive</b><span class="spacer" aria-hidden="true"></span><span>003 projects / All concept</span>
+    </div>
+    <h2 class="sr-only">Project archive</h2>
+    <div class="archive"><article class="archive-item comp-a">
+  <div class="archive-meta reveal"><p class="label">Project / 001</p>
+    <h3>APEX Auto Detailing</h3>
+    <dl class="metalist">
+      <div><dt>Category</dt><dd>Automotive</dd></div>
+      <div><dt>Type</dt><dd>Service business</dd></div>
+      <div><dt>Role</dt><dd>Design + development</dd></div>
+      <div><dt>Viewport</dt><dd>Responsive</dd></div>
+      <div><dt>Status</dt><dd>Concept project</dd></div>
+    </dl>
+    <p class="body-copy">A performance-led concept that makes a local detailing business feel more premium, focused, and easier to book.</p>
+    <div class="archive-tags"><span>Charcoal + hot accent</span><span>Condensed display</span><span>Package table</span><span>Booking path</span></div>
+    <p style="margin-top:6px"><a class="textlink" href="project-apex.html">Open case study <span aria-hidden="true">&#8599;</span></a></p></div>
+  <div class="archive-visual reveal" data-delay="1">
+    <div class="browser scrolls" style="--vh:500px">
+  <div class="browser-bar">
+    <span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="browser-url">apexautodetailing.ca</span>
+    <span class="browser-dim">1440 × 900</span>
+  </div>
+  <div class="browser-viewport" style="--vh:500px"><img class="browser-shot" src="assets/shots/apex-desktop-full.webp" alt="APEX Auto Detailing concept homepage, full page" width="1440" height="6274" loading="lazy" decoding="async"></div>
+</div>
+    <p class="shot-caption"><span>Full page / hover to scroll</span><b>1440 × 900</b></p>
+  </div>
+</article><article class="archive-item comp-b">
+  <div class="archive-meta reveal"><p class="label">Project / 002</p>
+    <h3>NOIR HOUSE</h3>
+    <dl class="metalist">
+      <div><dt>Category</dt><dd>Barbering</dd></div>
+      <div><dt>Type</dt><dd>Service business</dd></div>
+      <div><dt>Role</dt><dd>Design + development</dd></div>
+      <div><dt>Viewport</dt><dd>Responsive</dd></div>
+      <div><dt>Status</dt><dd>Concept project</dd></div>
+    </dl>
+    <p class="body-copy">A quieter, editorial barbershop direction built around taste, service clarity, and a cleaner booking experience.</p>
+    <div class="archive-tags"><span>Bone + espresso</span><span>High-contrast serif</span><span>Service list</span><span>Time-slot booking</span></div>
+    <p style="margin-top:6px"><a class="textlink" href="project-noir.html">Open case study <span aria-hidden="true">&#8599;</span></a></p></div>
+  <div class="archive-visual reveal" data-delay="1">
+    <div class="mobile-led">
+      <div class="device crops">
+  <div class="device-bar" aria-hidden="true"><span></span></div>
+  <div class="device-viewport" style="--vh:520px"><img class="device-shot" src="assets/shots/noir-mobile-full.webp" alt="NOIR HOUSE concept on a phone" width="390" height="10847" loading="lazy" decoding="async"></div>
+</div>
+      <div class="browser ">
+  <div class="browser-bar">
+    <span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="browser-url">noirhouse.ca</span>
+    <span class="browser-dim">1440 × 900</span>
+  </div>
+  <img class="browser-shot" src="assets/shots/noir-desktop.webp" alt="NOIR HOUSE concept homepage" width="1440" height="900" loading="lazy" decoding="async">
+</div>
+    </div>
+    <p class="shot-caption"><span>Responsive pair</span><b>390 × 844 + 1440 × 900</b></p>
+  </div>
+</article><article class="archive-item comp-c">
+  <div class="archive-meta reveal">
+    <div><p class="label">Project / 003</p><h3>EVERCREST Outdoor</h3></div>
+    <div>
+      <p class="body-copy">A landscape construction concept designed to build trust before the first call and attract more serious project inquiries.</p>
+      <div class="archive-tags" style="margin-top:16px"><span>Forest + stone</span><span>Grounded sans</span><span>Estimate flow</span><span>Service areas</span></div>
+      <p style="margin-top:18px"><a class="textlink" href="project-evercrest.html">Open case study <span aria-hidden="true">&#8599;</span></a></p>
+    </div>
+  </div>
+  <div class="archive-visual reveal" data-delay="1">
+    <div class="stacked-shots">
+      <div><div class="browser ">
+  <div class="browser-bar">
+    <span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="browser-url">evercrestoutdoor.ca</span>
+    <span class="browser-dim">1440 × 900</span>
+  </div>
+  <img class="browser-shot" src="assets/shots/evercrest-desktop.webp" alt="EVERCREST Outdoor concept homepage" width="1440" height="900" loading="lazy" decoding="async">
+</div><p class="shot-caption"><span>Home</span><b>1440 × 900</b></p></div>
+      <div><div class="browser ">
+  <div class="browser-bar">
+    <span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="browser-url">evercrestoutdoor.ca</span>
+    <span class="browser-dim">Detail</span>
+  </div>
+  <img class="browser-shot" src="assets/shots/evercrest-detail.webp" alt="Interface detail from the EVERCREST Outdoor concept" width="597" height="1161" loading="lazy" decoding="async">
+</div><p class="shot-caption"><span>Interface detail</span><b>Crop</b></p></div>
+    </div>
+  </div>
+</article></div>
+  </section>
+
+  <section class="next-step shell">
+  <div>
+    <p class="meta">Next step</p>
+    <h3>Seen enough? Find the right package or start the conversation.</h3>
+  </div>
+  <div class="button-row"><a class="button" href="services.html#recommender">Recommend my package</a><a class="button dark" href="contact.html">Start a project <span aria-hidden="true">&#8599;</span></a></div>
+</section>
 </main>
 <footer class="site-footer">
   <div class="shell footer-main">
-    <div>
-      <div class="kicker">KRD WEBSMITH</div>
-      <h2>Make the website<br>earn its place.</h2>
+    <div class="footer-brand">
+      <p class="label">KRD Websmith</p>
+      <h2>KRD<br>Websmith</h2>
+      <p>Web design /<br>Kitchener, Ontario</p>
     </div>
-    <div class="footer-col"><span>Explore</span><a href="work.html">Work</a><a href="services.html">Services</a><a href="process.html">Process</a><a href="audit.html">Website audit</a></div>
-    <div class="footer-col"><span>Contact</span><a href="about.html">About</a><a href="contact.html">Start a project</a><a href="mailto:hello@krdwebsmith.com">hello@krdwebsmith.com</a></div>
+    <div class="footer-col">
+      <span>Explore</span><a href="work.html">Work</a><a href="services.html">Services</a><a href="process.html">Process</a><a href="about.html">About</a><a href="audit.html">Audit</a>
+    </div>
+    <div class="footer-col">
+      <span>Start</span>
+      <a href="contact.html">Start a project</a>
+      <a href="mailto:hello@krdwebsmith.com">hello@krdwebsmith.com</a>
+    </div>
   </div>
-  <div class="footer-bottom"><span>© <span id="year"></span> KRD Websmith</span><span>Kitchener, Ontario / Remote</span></div>
+  <div class="shell footer-tech">
+    <div><span>Edition</span><strong>KRD / Web edition</strong></div>
+    <div><span>Service</span><strong>Design + development</strong></div>
+    <div><span>Location</span><strong>Kitchener / Remote</strong></div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; <span id="year">2026</span> KRD Websmith</span>
+    <span>krdwebsmith.com</span>
+  </div>
 </footer>
-<script src="script.js"></script></body></html>
+
+<script src="script.js" defer></script>
+</body>
+</html>

@@ -1,62 +1,187 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Process — KRD Websmith</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css"><style>
-.process-hero-image{margin-top:70px;height:620px}
-.process-list{border-top:1px solid var(--ink)}
-.process-step{
-  min-height:220px;
-  padding:30px 0;
-  display:grid;
-  grid-template-columns:80px 1fr 340px;
-  gap:30px;
-  align-items:center;
-  border-bottom:1px solid var(--line);
-}
-.process-step span{color:var(--blue);font:600 8px "IBM Plex Mono",monospace}
-.process-step h2{margin:0;font:500 clamp(34px,4.3vw,64px)/.95 "Cormorant Garamond",serif}
-.process-step p{margin:0}
-@media(max-width:850px){
-  .process-hero-image{height:460px}
-  .process-step{grid-template-columns:42px 1fr}
-  .process-step p{grid-column:2}
-}
-</style></head><body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Process — KRD Websmith</title>
+  <meta name="description" content="How a KRD Websmith project runs: understand, direction, build, refine, release. Clear stages, clear deliverables, no mystery.">
+  <link rel="canonical" href="https://krdwebsmith.com/process.html">
+  <meta name="theme-color" content="#F4F1EA">
+  <meta name="author" content="KRD Websmith">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KRD Websmith">
+  <meta property="og:title" content="Process — KRD Websmith">
+  <meta property="og:description" content="How a KRD Websmith project runs: understand, direction, build, refine, release. Clear stages, clear deliverables, no mystery.">
+  <meta property="og:url" content="https://krdwebsmith.com/process.html">
+  <meta property="og:locale" content="en_CA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Process — KRD Websmith">
+  <meta name="twitter:description" content="How a KRD Websmith project runs: understand, direction, build, refine, release. Clear stages, clear deliverables, no mystery.">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=IBM+Plex+Mono:wght@500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=IBM+Plex+Mono:wght@500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=IBM+Plex+Mono:wght@500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"></noscript>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header id="siteHeader" class="site-header">
-  <a class="brand" href="index.html" aria-label="KRD Websmith home">
-    <span class="brand-mark">KRD</span>
-    <span class="brand-copy"><strong>KRD WEBSMITH</strong><small>WEB DESIGN / DEVELOPMENT</small></span>
+  <a class="brand" href="index.html" aria-label="KRD Websmith — home">
+    <span class="brand-mark" aria-hidden="true">KRD</span>
+    <span class="brand-copy"><strong>KRD Websmith</strong><small>Web design / development</small></span>
   </a>
-  <nav class="desktop-nav" aria-label="Primary navigation"><a class="" href="work.html">Work</a><a class="" href="services.html">Services</a><a class="active" href="process.html">Process</a><a class="" href="audit.html">Audit</a><a class="" href="about.html">About</a></nav>
+  <nav class="desktop-nav" aria-label="Primary"><a href="work.html">Work</a><a href="services.html">Services</a><a href="process.html" class="active" aria-current="page">Process</a><a href="about.html">About</a><a href="audit.html">Audit</a></nav>
   <div class="header-action">
-    <a class="header-cta" href="contact.html">Start a project <span>↗</span></a>
-    <button id="menuToggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+    <a class="header-cta" href="contact.html">Start a project <span aria-hidden="true">&#8599;</span></a>
+    <button id="menuToggle" class="menu-toggle" type="button" aria-label="Open menu"
+            aria-expanded="false" aria-controls="mobileMenu"><i></i><i></i></button>
   </div>
 </header>
+
 <div id="mobileMenu" class="mobile-menu">
-  <nav><a href="work.html"><span>Work</span><small>01</small></a><a href="services.html"><span>Services</span><small>02</small></a><a href="process.html"><span>Process</span><small>03</small></a><a href="audit.html"><span>Audit</span><small>04</small></a><a href="about.html"><span>About</span><small>05</small></a><a href="contact.html"><span>Contact</span><small>06</small></a></nav>
+  <nav aria-label="Mobile"><a href="work.html"><span>Work</span><small>01</small></a><a href="services.html"><span>Services</span><small>02</small></a><a href="process.html" aria-current="page"><span>Process</span><small>03</small></a><a href="about.html"><span>About</span><small>04</small></a><a href="audit.html"><span>Audit</span><small>05</small></a><a href="contact.html"><span>Contact</span><small>06</small></a></nav>
+  <div class="mobile-menu-foot">
+    <span>KRD / Web studio</span>
+    <span>Kitchener / Ontario</span>
+    <span>hello@krdwebsmith.com</span>
+  </div>
 </div>
-<main id="main" class="shell"><div class="breadcrumbs"><a href="index.html">Home</a><span>/</span><span>Process</span></div><section class="page-hero"><div class="page-hero-grid"><div><div class="kicker">Process</div><h1>No mystery.<br><em>Clear steps.</em></h1></div><div class="page-hero-aside"><p class="body-copy">You should know what is happening, what I need from you, and what comes next.</p><div class="page-actions button-row"><a class="button dark" href="contact.html">Start a project <span>↗</span></a><a class="button" href="services.html">See services <span>→</span></a></div></div></div><div class="process-hero-image image-frame reveal"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=2200&q=86" alt="Professional team workspace"><div class="image-label">PROCESS / SCOPE TO LAUNCH</div></div></section>
-<section class="section"><div class="process-list">
-<div class="process-step reveal"><span>01</span><h2>Scope</h2><p class="body-copy">Define the business, audience, current site, required pages, and what the new website needs to accomplish.</p></div>
-<div class="process-step reveal"><span>02</span><h2>Direction</h2><p class="body-copy">Establish typography, image language, page hierarchy, interaction style, and customer journey.</p></div>
-<div class="process-step reveal"><span>03</span><h2>Build</h2><p class="body-copy">Code the approved direction responsively with the required forms, content, and interactions.</p></div>
-<div class="process-step reveal"><span>04</span><h2>Refine</h2><p class="body-copy">Test on real screen sizes, review the details, and complete the agreed revision rounds.</p></div>
-<div class="process-step reveal"><span>05</span><h2>Launch</h2><p class="body-copy">Deploy the approved site, verify the live system, and hand over the finished project cleanly.</p></div>
-</div></section>
-<section class="next-step"><div><div class="meta">Next step</div><h3>Want to see the process applied?</h3></div><div class="button-row"><a class="button" href="work.html">View work</a><a class="button" href="services.html#recommender">Find my package</a><a class="button dark" href="contact.html">Start a project ↗</a></div></section>
+<main id="main">
+  <nav class="breadcrumbs shell" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Process</span></nav>
+  <section class="page-hero shell">
+    <div class="page-hero-grid">
+      <div>
+        <p class="label">Process / Scope to launch</p>
+        <h1 class="display">How the work<br><em>gets made.</em></h1>
+      </div>
+      <div class="page-hero-aside">
+        <p class="body-copy">You should know what is happening, what I need from you, and what comes
+          next. No mystery, no invented ceremony.</p>
+        <div class="page-actions button-row">
+          <a class="button dark" href="contact.html">Start a project <span aria-hidden="true">&#8599;</span></a>
+          <a class="button" href="services.html">See services <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section shell">
+    <div class="section-index">
+      <b>Documentation</b><span class="spacer" aria-hidden="true"></span><span>005 stages / Scope to launch</span>
+    </div>
+    <h2 class="sr-only">The five stages</h2>
+    <div class="doc"><div class="doc-step reveal">
+  <span class="num">01</span>
+  <div>
+    <h3>Understand</h3>
+    <div class="doc-terms"><span>Business</span><span>Customer</span><span>Goal</span></div>
+  </div>
+  <div class="doc-body">
+    <p>Define the business, audience, current site, required pages, and what the new website actually needs to accomplish.</p>
+    <p class="meta">Output / scope + page list</p>
+  </div>
+</div><div class="doc-step reveal">
+  <span class="num">02</span>
+  <div>
+    <h3>Direction</h3>
+    <div class="doc-terms"><span>Structure</span><span>Type</span><span>Image</span><span>Interaction</span></div>
+  </div>
+  <div class="doc-body">
+    <p>Establish typography, image language, page hierarchy, interaction style, and the customer journey before polishing screens.</p>
+    <p class="meta">Output / design direction</p>
+  </div>
+</div><div class="doc-step reveal">
+  <span class="num">03</span>
+  <div>
+    <h3>Build</h3>
+    <div class="doc-terms"><span>Responsive</span><span>Accessible</span><span>Fast</span></div>
+  </div>
+  <div class="doc-body">
+    <p>Code the approved direction for desktop, tablet and mobile with the required forms, content and interactions.</p>
+    <p class="meta">Output / working website</p>
+  </div>
+</div><div class="doc-step reveal">
+  <span class="num">04</span>
+  <div>
+    <h3>Refine</h3>
+    <div class="doc-terms"><span>Test</span><span>Review</span><span>Adjust</span></div>
+  </div>
+  <div class="doc-body">
+    <p>Test on real screen sizes, review the details, and complete the agreed revision rounds before anything ships.</p>
+    <p class="meta">Output / revision rounds</p>
+  </div>
+</div><div class="doc-step reveal">
+  <span class="num">05</span>
+  <div>
+    <h3>Release</h3>
+    <div class="doc-terms"><span>Deploy</span><span>Verify</span><span>Hand over</span></div>
+  </div>
+  <div class="doc-body">
+    <p>Deploy the approved site, verify the live domain and forms, and hand over a working system you own.</p>
+    <p class="meta">Output / live site</p>
+  </div>
+</div></div>
+  </section>
+
+  <section class="section tight shell">
+    <div class="section-head">
+      <h2 class="display-sm reveal">What you get<br><em>at every stage.</em></h2>
+      <p class="body-copy section-note reveal" data-delay="1">Each stage ends with something you can
+        look at and respond to, so the project never disappears into silence.</p>
+    </div>
+    <div class="reveal mask">
+      <div class="frame" style="aspect-ratio:21/9">
+        <img src="assets/img/desk-1400.webp"
+             srcset="assets/img/desk-800.webp 800w, assets/img/desk-1400.webp 1400w, assets/img/desk-2000.webp 2000w"
+             sizes="(max-width:760px) 100vw, 1400px"
+             alt="A working desk with a website design in progress"
+             width="1400" height="933" loading="lazy" decoding="async">
+        <span class="frame-tag">Scope &#8594; Direction &#8594; Build &#8594; Refine &#8594; Release</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="next-step shell">
+  <div>
+    <p class="meta">Next step</p>
+    <h3>Want to see the process applied?</h3>
+  </div>
+  <div class="button-row"><a class="button" href="work.html">View work</a><a class="button" href="services.html#recommender">Find my package</a><a class="button dark" href="contact.html">Start a project <span aria-hidden="true">&#8599;</span></a></div>
+</section>
 </main>
 <footer class="site-footer">
   <div class="shell footer-main">
-    <div>
-      <div class="kicker">KRD WEBSMITH</div>
-      <h2>Make the website<br>earn its place.</h2>
+    <div class="footer-brand">
+      <p class="label">KRD Websmith</p>
+      <h2>KRD<br>Websmith</h2>
+      <p>Web design /<br>Kitchener, Ontario</p>
     </div>
-    <div class="footer-col"><span>Explore</span><a href="work.html">Work</a><a href="services.html">Services</a><a href="process.html">Process</a><a href="audit.html">Website audit</a></div>
-    <div class="footer-col"><span>Contact</span><a href="about.html">About</a><a href="contact.html">Start a project</a><a href="mailto:hello@krdwebsmith.com">hello@krdwebsmith.com</a></div>
+    <div class="footer-col">
+      <span>Explore</span><a href="work.html">Work</a><a href="services.html">Services</a><a href="process.html">Process</a><a href="about.html">About</a><a href="audit.html">Audit</a>
+    </div>
+    <div class="footer-col">
+      <span>Start</span>
+      <a href="contact.html">Start a project</a>
+      <a href="mailto:hello@krdwebsmith.com">hello@krdwebsmith.com</a>
+    </div>
   </div>
-  <div class="footer-bottom"><span>© <span id="year"></span> KRD Websmith</span><span>Kitchener, Ontario / Remote</span></div>
+  <div class="shell footer-tech">
+    <div><span>Edition</span><strong>KRD / Web edition</strong></div>
+    <div><span>Service</span><strong>Design + development</strong></div>
+    <div><span>Location</span><strong>Kitchener / Remote</strong></div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; <span id="year">2026</span> KRD Websmith</span>
+    <span>krdwebsmith.com</span>
+  </div>
 </footer>
-<script src="script.js"></script></body></html>
+
+<script src="script.js" defer></script>
+</body>
+</html>
