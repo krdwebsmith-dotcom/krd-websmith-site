@@ -214,12 +214,8 @@
 <script>
 
 const form=document.getElementById("contactForm"),req=[...form.querySelectorAll("[required]")],all=[...form.querySelectorAll("input,select,textarea")];
-/* Prefill source: the query string when it survives, otherwise the handoff stashed by script.js.
-   Some static hosts 301 "/x.html?q" to "/x" and drop the query, so we keep a same-session fallback. */
-var pfq=location.search.slice(1);
-if(!pfq){try{pfq=sessionStorage.getItem("krd:prefill")||""}catch(e){pfq=""}}
-try{sessionStorage.removeItem("krd:prefill")}catch(e){}
-const params=new URLSearchParams(pfq);
+/* Prefill comes from the query string, e.g. contact.html?package=Growth+Website */
+const params=new URLSearchParams(location.search);
 if(params.get("package")){form.elements.type.value=params.get("package")==="Advanced Build"?"Custom build":params.get("package")==="Growth Website"?"Website redesign":"New business website";form.elements.message.value="Recommended package: "+params.get("package")}
 if(params.get("audit"))form.elements.message.value="Website audit score: "+params.get("audit")+"/100. Main focus: "+(params.get("focus")||"website improvement")+".";
 if(params.get("project"))form.elements.message.value="I am interested in a project with a similar level of design to "+params.get("project")+".";

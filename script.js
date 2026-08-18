@@ -106,23 +106,6 @@
     sweep();
   }
 
-  /* ---- contact prefill handoff ------------------------------------------
-     CTAs link to contact.html?package=… / ?audit=…&focus=… / ?project=…
-     Some static hosts 301 "/contact.html?q" to "/contact" and drop the query.
-     Stash the params on click so contact.html can still prefill. The query
-     string stays the primary source; this is only a same-session fallback.
-     Wrapped in try/catch because sandboxed/opaque origins block storage.     */
-  document.addEventListener("click", function (ev) {
-    var link = ev.target.closest ? ev.target.closest('a[href*="contact.html?"]') : null;
-    if (!link) return;
-    var qs = link.getAttribute("href").split("?")[1];
-    if (!qs) return;
-    try {
-      sessionStorage.setItem("krd:prefill", qs.split("#")[0]);
-    } catch (e) {
-      /* storage unavailable — the query string still carries the data */
-    }
-  });
 
   /* ---- footer year ----------------------------------------------------- */
   var year = document.getElementById("year");
